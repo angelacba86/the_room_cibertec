@@ -11,7 +11,7 @@ header img {
   height: 60px;
 }
 
-nav ul {
+nav .header {
   display: flex;
   width: 428px;
   height: 75px;
