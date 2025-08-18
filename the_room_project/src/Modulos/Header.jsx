@@ -5,7 +5,7 @@ function Header(){
         <header>
             <img src="./logo.png" alt="The Room" />
             <nav>
-                <ul>
+                <ul className='nav-header'>
                     <a href="#" className='active'><li>Inicio</li></a>
                     <a href="#"><li>Películas y Series</li></a>
                     <a href="#"><li>Soporte</li></a>
