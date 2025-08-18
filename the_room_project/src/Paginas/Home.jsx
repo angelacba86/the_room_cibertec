@@ -1,16 +1,11 @@
 import Banner from "../Modulos/Banner"
 import Footer from "../Modulos/Footer"
-import PreguntasHome from "../Modulos/PreguntasHome"
-import PlanesHome from "../Modulos/PlanesHome"
-import BannerTrial from "../Modulos/BannerTrial"
 function Home(){
     return(
         <>
         <Banner></Banner>
         <main>
-            <PreguntasHome></PreguntasHome>
-            <PlanesHome></PlanesHome>
-            <BannerTrial></BannerTrial>
+            <h1>Aca va el contenido de la pagina</h1>
         </main>
         <Footer></Footer>
         </>
