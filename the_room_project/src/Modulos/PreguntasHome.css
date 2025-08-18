@@ -1,0 +1,12 @@
+/* .contenedor{
+    
+} */
+.preguntas-contenedor{
+    width: 100%;
+}
+.pregunta{
+    width: 50%;
+    display:flex;
+    margin:20px 0;
+
+}
