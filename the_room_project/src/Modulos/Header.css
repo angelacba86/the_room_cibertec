@@ -1,0 +1,58 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 60px;
+  align-items: center;
+}
+
+header img {
+  width: 253.5px;
+  height: 60px;
+}
+
+nav ul {
+  display: flex;
+  width: 428px;
+  height: 75px;
+  background-color: #0f0f0f;
+  align-items: center;
+  border: solid #1f1f1f 4px;
+  border-radius: 12px;
+  padding-inline: 10px;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul a {
+  text-decoration: none;
+  padding: 14px;
+  color: #bfbfbf;
+  margin-left: 25px;
+  white-space: nowrap;
+}
+nav ul a:hover {
+  background-color: #282828;
+  border-radius: 8px;
+  border: #1a1a1a solid 1px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul a.active{
+     background-color: #1a1a1a;
+  border-radius: 8px;
+  border: #1a1a1a solid 1px;
+  color: #fff;
+  text-decoration: none; 
+}
+
+.usuario {
+  display: flex;
+  width: 159px;
+  gap: 30px;
+}
+.usuario img {
+  width: 36px;
+  height: 36px;
+}

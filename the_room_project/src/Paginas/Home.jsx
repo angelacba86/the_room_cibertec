@@ -1,9 +1,9 @@
-import Header from "../Modulos/Header"
+import Banner from "../Modulos/Banner"
 import Footer from "../Modulos/Footer"
 function Home(){
     return(
         <>
-        <Header></Header>
+        <Banner></Banner>
         <main>
             <h1>Aca va el contenido de la pagina</h1>
         </main>
