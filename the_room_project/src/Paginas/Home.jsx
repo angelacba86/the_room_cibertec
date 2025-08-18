@@ -112,6 +112,7 @@ function Home(){
             </div>
         </main>
         <Footer></Footer>
+        
         </>
     )
 }
