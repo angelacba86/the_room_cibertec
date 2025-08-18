@@ -11,7 +11,7 @@ header img {
   height: 60px;
 }
 
-nav .header {
+nav .nav-header {
   display: flex;
   width: 428px;
   height: 75px;
@@ -21,17 +21,17 @@ nav .header {
   border-radius: 12px;
   padding-inline: 10px;
 }
-nav ul li {
+nav .nav-header li {
   list-style: none;
 }
-nav ul a {
+nav .nav-header a {
   text-decoration: none;
   padding: 14px;
   color: #bfbfbf;
   margin-left: 25px;
   white-space: nowrap;
 }
-nav ul a:hover {
+nav .nav-header a:hover {
   background-color: #282828;
   border-radius: 8px;
   border: #1a1a1a solid 1px;
@@ -39,7 +39,7 @@ nav ul a:hover {
   text-decoration: none;
 }
 
-nav ul a.active{
+nav .nav-header a.active{
      background-color: #1a1a1a;
   border-radius: 8px;
   border: #1a1a1a solid 1px;
