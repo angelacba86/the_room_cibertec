@@ -1,6 +1,9 @@
 import Banner from "../Modulos/Banner"
 import Footer from "../Modulos/Footer"
 import "./Home.css"
+import PreguntasHome from "../Modulos/PreguntasHome"
+import PlanesHome from "../Modulos/PlanesHome"
+import BannerTrial from "../Modulos/BannerTrial"
 function Home(){
     return(
         <>
@@ -110,6 +113,9 @@ function Home(){
 
                 </div>
             </div>
+        <PreguntasHome></PreguntasHome>
+        <PlanesHome></PlanesHome>
+        <BannerTrial></BannerTrial>
         </main>
         <Footer></Footer>
         
