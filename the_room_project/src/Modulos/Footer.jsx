@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './Footer.css'
 
 function Footer() {
@@ -34,6 +35,13 @@ function Footer() {
                 </div>
             </div>
         </footer>
+=======
+function Footer(){
+    return(
+        <>
+        <h1></h1>
+        </>
+>>>>>>> 1f445961254a737733dd69ea60add4b5ae06fe8b
     )
 }
 export default Footer
