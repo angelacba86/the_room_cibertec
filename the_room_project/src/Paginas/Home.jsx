@@ -1,10 +1,10 @@
-import Header from "../Modulos/Header"
+import Banner from "../Modulos/Banner"
 import Footer from "../Modulos/Footer"
 import "./Home.css"
 function Home(){
     return(
         <>
-        <Header></Header>
+        <Banner></Banner>
         <main>
             <div className="contenedor1">
                 <div className="parte1">
