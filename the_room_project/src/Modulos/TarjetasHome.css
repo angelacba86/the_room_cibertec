@@ -1,10 +1,7 @@
 .contenedor1{
 
-    width: 1152px;
-    height: 744px;
-    margin-left: 775px;
-    margin-right: 775px;
-
+    width: 100%;
+    padding:20px 6%;
     
     .parte1{
         margin-bottom: 50px;
