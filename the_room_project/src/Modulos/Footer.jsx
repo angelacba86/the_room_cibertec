@@ -25,7 +25,7 @@ function Footer() {
                 </nav>
 
                 <div className="f-bottom">
-                    <h3>© 2025 streamvib, All Rights Reserved</h3>
+                    <h3>© 2025 The Room, All Rights Reserved</h3>
                     <div className="politicas">
                         <a href="#">Terminos de uso</a>
                         <a href="#">Politicas de Privacidad</a>
