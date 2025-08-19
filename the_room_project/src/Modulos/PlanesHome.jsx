@@ -4,69 +4,64 @@ function PlanesHome() {
     return (
         <div className="contenedor-titulos">
             <div className="titulo">
-                <h2>Choose the plan that's right for you</h2>
+                <h2>Elige el plan adecuado para ti</h2>
                 <p>
-                    Join StreamVibe and select from our flexible subscription options
-                    tailored to suit your viewing preferences. Get ready for non-stop
-                    entertainment!
+                    Únete a StreamVibe y elige entre nuestras flexibles opciones de suscripción, adaptadas a tus preferencias. ¡Prepárate para entretenimiento sin límites!
                 </p>
             </div>
             <div className="planes">
                 <div className="plan">
                     <div className="detallePlan">
-                        <h3>Basic Plan</h3>
+                        <h3>Plan Basico</h3>
                         <p>
-                            Enjoy an extensive library of movies and shows, featuring a range
-                            of content, including recently released titles.
+                            Disfruta de una amplia biblioteca de películas y programas, con una variedad de contenido, incluidos títulos de reciente lanzamiento.
                         </p>
                     </div>
                     <div className="precio">
                         <h2>$9.99</h2>
                         <p>
-                            /month
+                            /mes
                         </p>
                     </div>
                     <div className="botons">
-                        <a href="#" id="BotonNegro">Start Free Trial</a>
-                        <a href="#">Choose Plan</a>
+                        <a href="#" id="BotonNegro">Comience una prueba gratuita</a>
+                        <a href="#">Elige un Plan</a>
                     </div>
                 </div>
                 <div className="plan">
                     <div className="detallePlan">
-                        <h3>Standar Plan</h3>
+                        <h3>Plan Estandar</h3>
                         <p>
-                            Access to a wider selection of movies and shows, including most
-                            new releases and exclusive content
+                            Acceso a una selección más amplia de películas y programas, incluyendo la mayoría de los estrenos y contenido exclusivo.
                         </p>
                     </div>
                     <div className="precio">
                         <h2>$12.99</h2>
                         <p>
-                            /month
+                            /mes
                         </p>
                     </div>
                     <div className="botons">
-                        <a href="#" id="BotonNegro">Start Free Trial</a>
-                        <a href="#">Choose Plan</a>
+                        <a href="#" id="BotonNegro">Comience una prueba gratuita</a>
+                        <a href="#">Elige un Plan</a>
                     </div>
                 </div>
                 <div className="plan">
                     <div className="detallePlan">
-                        <h3>Premium Plan</h3>
+                        <h3>Plan Premiun</h3>
                         <p>
-                            Access to a widest selection of movies and shows, including all
-                            new releases and Offline Viewing
+                            Acceso a la más amplia selección de películas y programas, incluyendo todos los estrenos y la posibilidad de ver sin conexión.
                         </p>
                     </div>
                     <div className="precio">
                         <h2>$14.99 </h2>
                         <p>
-                            /month
+                            /mes
                         </p>
                     </div>
                     <div className="botons">
-                        <a href="#" id="BotonNegro">Start Free Trial</a>
-                        <a href="#">Choose Plan</a>
+                        <a href="#" id="BotonNegro">Comience una prueba gratuita</a>
+                        <a href="#">Elige un Plan</a>
                     </div>
                 </div>
             </div>
