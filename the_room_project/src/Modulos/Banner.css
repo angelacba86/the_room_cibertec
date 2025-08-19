@@ -1,13 +1,13 @@
 .contenedor-banner {
   background: linear-gradient(
       to top,
-      rgb(20, 20, 20) 40%,
+      rgb(20, 20, 20) 35%,
       rgba(20, 20, 20, 0) 100%
     ),
     url("/fondo_banner.png");
-  height: 1092px;
+  height: 850px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column ;
 }
 .banner-texto {
   margin-top: auto;
@@ -27,8 +27,12 @@
   border-radius: 8px;
   cursor: pointer;
 }
-.banner-texto a:hover{
+.banner-texto a:hover {
   background-color: #c70202;
+}
+.banner-texto h1 {
+  font-size: 58px;
+  line-height: 150%;
 }
 .banner-texto p {
   color: #999;
