@@ -1,0 +1,73 @@
+.contenedor1{
+
+    width: 1152px;
+    height: 744px;
+    margin-left: 775px;
+    margin-right: 775px;
+
+    
+    .parte1{
+        margin-bottom: 50px;
+        h3{
+            font-family: Manrope;
+            font-size: 38px;
+            margin-bottom: 14px;
+        }
+        p{
+            font-family: Manrope;
+            font-size: 18px;
+        }
+}
+}
+
+
+.contenedorTarjetas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    
+    img{
+        padding: 16px;
+        
+        border-radius: 12px;
+        background-color:rgba(20, 20, 20, 1)
+        
+    }
+    h4{
+        font-family: Manrope;
+        font-weight: 600;
+        font-size: 24px;
+        padding-left: 16px;
+       
+    }
+
+    .seccion1{
+    display: flex;
+    height: 72px;
+    align-items: center;
+    padding: 50px 50px 15px 25px;
+    }
+
+}
+
+    .seccion2{
+
+        text-align: justify;
+        padding: 25px 
+        
+    }
+
+
+/*Tarjeta general*/
+.tarjeta1{
+    margin: 10px;
+    /*margin-right: 10px;
+    margin-bottom: 15px;*/
+    border: solid 0.5px;
+    border-radius: 12px;
+    border-color: rgba(38, 38, 38, 1);
+    background: linear-gradient(to left, rgba(209, 25, 25, 0.048),  rgba(243, 243, 243, 0));
+color: rgb(214, 204, 204);
+
+    
+}
