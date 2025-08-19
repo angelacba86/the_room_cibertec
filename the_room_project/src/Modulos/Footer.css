@@ -1,13 +1,13 @@
 footer {
-  height: 411px;
+  height: 300px;
   width: 100%;
-  padding: 0px 160px;
+  padding: 0px 6%;
   text-align: center;
   background-color: black;
   .container{
     width: 100%;
     max-width: none;
-    padding-top: 90px;
+    padding-top: 50px;
   }
   a {
     text-decoration: none;
@@ -21,10 +21,9 @@ footer {
     }
   }
   nav {
-    height: 261px;
+    height: 200px;
     display: flex;
     justify-content: space-between;
-    /* padding: 100px; */
     .menu-link {
       width: 80%;
       ul {
@@ -84,7 +83,7 @@ footer {
       a{
         font-size: 18px;
         color: #999;
-        margin-inline-start: 100px;
+        margin-inline-start: 150px;
     }
   }
 }
