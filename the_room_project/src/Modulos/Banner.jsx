@@ -8,9 +8,9 @@ function Banner() {
         <div className="banner-texto">
           <h1>La Mejor Experiencia de Streaming</h1>
           <p>
-            StreamVibe es la mejor experiencia de streaming para ver tus
+            The Room es la mejor experiencia de streaming para ver tus
             películas y series favoritas online, cuando quieras y donde
-            quieras.Con StreamVibe, puedes disfrutar de una gran variedad de
+            quieras.Con The Room, puedes disfrutar de una gran variedad de
             contenido, incluyendo los últimos blockbuster, cine clásico, las
             series mas populares del momento, y más.
           </p>
