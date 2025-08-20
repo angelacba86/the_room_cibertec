@@ -1,0 +1,12 @@
+.Contenedor-BannerMovies{
+    background: linear-gradient(
+      to top,
+      rgb(20, 20, 20) 5%,
+      rgba(20, 20, 20, 0) 100%
+    ),
+    url("/Banner1Movie.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 835px;
+    margin-inline: 6%;
+}
