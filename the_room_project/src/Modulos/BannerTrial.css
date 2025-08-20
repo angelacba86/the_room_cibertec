@@ -1,0 +1,41 @@
+.contenedor {
+  width: 100%;
+  padding: 20px 6%;
+  margin: 90px 0;
+}
+.img-fondo {
+  width: 100%;
+  align-items: center;
+  background-image: url("/banner-trial.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 244px;
+  border-radius: 8px;
+}
+.img-fondo div {
+  padding: 33px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.img-fondo div .texto-banner {
+  display: flex;
+  flex-direction: column;
+}
+.img-fondo div .texto-banner h2,
+p {
+  align-self: flex-start;
+}
+.boton-trial {
+  display: inline-block;
+  background-color: #e50000;
+  padding: 18px 24px;
+  border-radius: 8px;
+  border: solid #8f0101 1px;
+  color: #fff;
+  font-size: 18px;
+}
+.boton-trial:hover {
+  background-color: #8f0101;
+}

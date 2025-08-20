@@ -5,10 +5,10 @@ function TarjetasHome (){
             <div className="contenedor1">
                 <div className="parte1">
                     <h3>
-                        We Provide you streaming experience across various devices.
+                        Le brindamos experiencia de transmisión en varios dispositivos.
                     </h3>
                     <p>
-                    With StreamVibe, you can enjoy your favorite movies and TV shows anytime, anywhere. Our platform is designed to be compatible with a wide range of devices, ensuring that you never miss a moment of entertainment.
+                    Con The Room, puedes disfrutar de tus películas y series favoritas en cualquier momento y lugar. Nuestra plataforma está diseñada para ser compatible con una amplia gama de dispositivos, lo que garantiza que nunca te pierdas un momento de entretenimiento.
                     </p>    
                 </div>
 
@@ -21,8 +21,8 @@ function TarjetasHome (){
                             </h4>
                         </div>
                         <div className="seccion2">
-                            <p>
-                                StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store
+                            <p>   
+                            The Room está optimizado para smartphones Android y iOS. Lleva la experiencia contigo a donde vayas: descarga la app desde Google Play Store o Apple App Store y explora cada detalle desde la palma de tu mano.
                             </p>
                         </div>
                     </div>
@@ -36,7 +36,7 @@ function TarjetasHome (){
                         </div>
                         <div className="seccion2">
                             <p>
-                                StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store
+                                The Room está optimizado para tablets Android y iPad. Disfruta de una experiencia inmersiva con controles táctiles intuitivos y gráficos de alta calidad. Solo descarga la app desde Google Play Store o Apple App Store y empieza a explorar desde tu dispositivo favorito.
                             </p>
                         </div>
                     </div>
@@ -49,8 +49,8 @@ function TarjetasHome (){
                             </h4>
                         </div>
                         <div className="seccion2">
-                            <p>
-                                StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store
+                            <p>  
+                            The Room está optimizado para televisores inteligentes. Sumérgete en la experiencia desde la comodidad de tu sala: solo abre la app en tu Smart TV o accede a través de tu dispositivo de streaming favorito. Vive cada detalle en pantalla grande.
                             </p>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ function TarjetasHome (){
                         </div>
                         <div className="seccion2">
                             <p>
-                                StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store
+                                The Room también está disponible para computadoras portátiles. Disfruta de una experiencia fluida directamente desde tu navegador, sin necesidad de instalar nada. Solo accede a nuestra plataforma desde tu laptop y comienza a explorar.
                             </p>
                         </div>
                     </div>
@@ -78,7 +78,7 @@ function TarjetasHome (){
                         </div>
                         <div className="seccion2">
                             <p>
-                                StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store
+                                The Room está optimizado para consolas de videojuegos. Vive una experiencia envolvente en tu PlayStation, Xbox o Nintendo Switch, con controles precisos y gráficos impresionantes en pantalla grande. Solo descarga la app desde la tienda de tu consola y sumérgete en el misterio desde tu sofá.
                             </p>
                         </div>
                     </div>
@@ -92,7 +92,7 @@ function TarjetasHome (){
                         </div>
                         <div className="seccion2">
                             <p>
-                                StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store
+                                The Room está optimizado para visores de realidad virtual. Sumérgete por completo en el misterio con una experiencia envolvente en 360°, controles intuitivos y una atmósfera que te rodea por completo. Compatible con dispositivos como Meta Quest, HTC Vive y otros visores VR. Solo instala la app desde la tienda de tu visor y prepárate para explorar como nunca antes.
                             </p>
                         </div>
                     </div>
