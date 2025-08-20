@@ -7,7 +7,7 @@
     url("/fondo_banner.png");
   height: 850px;
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
 }
 .banner-texto {
   margin-top: auto;
@@ -33,10 +33,14 @@
 .banner-texto h1 {
   font-size: 58px;
   line-height: 150%;
+  overflow-wrap: break-word; /* Que no se salga del contenedor */
+  word-break: break-word;
 }
 .banner-texto p {
   color: #999;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
+  overflow-wrap: break-word; /* Que no se salga del contenedor */
+  word-break: break-word;
 }

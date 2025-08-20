@@ -4,7 +4,6 @@ function Banner() {
   return (
     <>
       <div className="contenedor-banner">
-        <Header></Header>
         <div className="banner-texto">
           <h1>La Mejor Experiencia de Streaming</h1>
           <p>
