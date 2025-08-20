@@ -14,9 +14,7 @@ function Home(){
         <PreguntasHome></PreguntasHome>
         <PlanesHome></PlanesHome>
         <BannerTrial></BannerTrial>
-        </main>
-        <Footer></Footer>
-        
+        </main>        
         </>
     )
 }
