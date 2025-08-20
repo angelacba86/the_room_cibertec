@@ -12,7 +12,9 @@ export const latestReleases = [
     lenguajesDisponibles: ["Inglés", "Español"],
     generos: ["Acción", "Comedia"],
     duracion: 120,
-    cantidadVistas: 4700000
+    cantidadVistas: 4700000,
+    poster: "/last_release/poster_movie01.png",
+    banner: "/last_release/banner_movie01.png"
   },
   {
     title: "Weapons",
@@ -27,7 +29,9 @@ export const latestReleases = [
     lenguajesDisponibles: ["Inglés", "Español"],
     generos: ["Horror", "Thriller"],
     duracion: 110,
-    cantidadVistas: 2500000
+    cantidadVistas: 2500000,
+    poster: "/last_release/poster_movie02.png",
+    banner: "/last_release/banner_movie02.png"
   },
   {
     title: "The Naked Gun",
@@ -42,7 +46,9 @@ export const latestReleases = [
     lenguajesDisponibles: ["Inglés", "Español"],
     generos: ["Comedia", "Policial"],
     duracion: 105,
-    cantidadVistas: 3200000
+    cantidadVistas: 3200000,
+    poster: "/last_release/poster_movie03.png",
+    banner: "/last_release/banner_movie03.png"
   },
   {
     title: "Freakier Friday",
@@ -57,7 +63,9 @@ export const latestReleases = [
     lenguajesDisponibles: ["Inglés", "Español"],
     generos: ["Comedia", "Fantasía"],
     duracion: 100,
-    cantidadVistas: 2800000
+    cantidadVistas: 2800000,
+    poster: "/last_release/poster_movie04.png",
+    banner: "/last_release/banner_movie04.png"
   },
   {
     title: "The Conjuring: Last Rites",
@@ -72,7 +80,9 @@ export const latestReleases = [
     lenguajesDisponibles: ["Inglés", "Español"],
     generos: ["Horror", "Suspenso"],
     duracion: 115,
-    cantidadVistas: 2600000
+    cantidadVistas: 2600000,
+    poster: "/last_release/poster_movie05.png",
+    banner: "/last_release/banner_movie05.png"
   },
   {
     title: "The Black Phone 2",
@@ -87,7 +97,9 @@ export const latestReleases = [
     lenguajesDisponibles: ["Inglés", "Español"],
     generos: ["Horror", "Thriller"],
     duracion: 110,
-    cantidadVistas: 2400000
+    cantidadVistas: 2400000,
+    poster: "/last_release/poster_movie06.png",
+    banner: "/last_release/banner_movie06.png"
   },
   {
     title: "TRON: Ares",
@@ -102,7 +114,9 @@ export const latestReleases = [
     lenguajesDisponibles: ["Inglés", "Español", "Francés"],
     generos: ["Ciencia ficción", "Acción"],
     duracion: 120,
-    cantidadVistas: 3000000
+    cantidadVistas: 3000000,
+    poster: "/last_release/poster_movie07.png",
+    banner: "/last_release/banner_movie07.png"
   },
   {
     title: "Avatar: Fire and Ash",
@@ -117,6 +131,8 @@ export const latestReleases = [
     lenguajesDisponibles: ["Inglés", "Español"],
     generos: ["Aventura", "Fantasía", "Ciencia ficción"],
     duracion: 135,
-    cantidadVistas: 4000000
+    cantidadVistas: 4000000,
+    poster: "/last_release/poster_movie08.png",
+    banner: "/last_release/banner_movie08.png"
   }
 ];
