@@ -1,5 +1,4 @@
 import Banner from "../Modulos/Banner"
-import Footer from "../Modulos/Footer"
 import "./Home.css"
 import PreguntasHome from "../Modulos/PreguntasHome"
 import PlanesHome from "../Modulos/PlanesHome"
