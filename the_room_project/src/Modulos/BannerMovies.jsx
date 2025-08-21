@@ -2,7 +2,7 @@ import './BannerMovies.css'
 function BannerMovies() {
   return (
     <>
-      <div className="Contenedor-BannerMovies">
+      <div className="Contenedor-BannerMovies">        
           <div className="TextoBannerMovies">
             <h1>Avengers : Endgame</h1>
             <p>
@@ -14,7 +14,7 @@ function BannerMovies() {
             </p>
           </div>
           <div className="botonesBanner">
-            <a>
+            <a className='btnPlay'>
               <img src="./icon-play.png" alt="play" /> Play Now
             </a>
             <a>
