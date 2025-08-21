@@ -1,0 +1,117 @@
+
+.contenedor-card{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.contenedor1{
+    /*padding-right: 50px;
+    padding-left: 50px;*/
+}
+.titulo-flechas{
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    h3{
+        height: 57px;
+        max-width: 100%;
+        width: auto;
+
+
+        font-family: Manrope;
+        font-weight: 700;
+        font-size: 38px;
+    }
+}
+
+.flechas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 257px;
+    height: 76px;
+    gap: 16px;
+    font-size: 56px;
+    border-radius: 10px;
+    background-color: rgba(15, 15, 15, 1);
+    .icono-flecha{
+        border-radius: 12px;
+        cursor: pointer;
+        background-color: rgba(31, 31, 31, 1)
+        
+        
+    }
+    .botones{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        button{
+            width: 23px;
+            height: 4px;
+        }
+    }
+}
+
+/*Contenedor de trajetas*/
+
+.card1{
+    width: 283px;
+    height: 372px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: rgba(38, 38, 38, 1);
+    transition: transform 0.3s ease;
+    img{
+        padding: 20px 20px 20px 20px;
+    }
+    .duracion{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        p{
+            font-size: 16px;
+            
+        }
+        
+
+    }
+}
+
+.tiempo{
+    display: flex;
+    text-align: center;
+    width: 108;
+    height: 36;
+    gap: 5px;
+    padding-inline: 6px;
+    border-radius: 50px;
+    background-color: rgba(20, 20, 20, 1);
+    width: 108px;
+    height: 36px;
+    padding-top: 6px;
+
+}
+.vista{
+    display: flex;
+    gap: 5px;
+    padding-inline: 6px;
+    border-radius: 50px;
+    background-color: rgba(20, 20, 20, 1);
+    width: 64px;
+    height: 36px;
+    padding-top: 6px;
+    
+
+}
+
+.card1:hover{
+    transform: scale(1.07)
+
+}
+.icono-flecha:hover{
+    background-color: rgb(54, 54, 54)
+}
