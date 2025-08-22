@@ -2,19 +2,13 @@
   position: relative;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+  padding: 0 6%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0,0,0,0.85) 35%,
-      rgba(0,0,0,0.6) 60%,
-      rgba(0, 0, 0, 0) 100%
-    ),
-    url("./Banner1Movie.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -24,6 +18,7 @@
   .TextoBannerMovies {
     text-align: center;
     padding: 0 10%;
+    z-index: 2;
 
     h1 {
       font-size: 3rem;
@@ -42,6 +37,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
+    z-index: 2;
 
     a {
       display: flex;
@@ -78,4 +74,92 @@
       }
     }
   }
+
+  .nav-buttons {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    padding: 0 20px;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    padding: 5px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    user-select: none;
+    transition: background 0.3s ease;
+
+    .arrow-left:hover,
+    .arrow-right:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+  .image-index {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+
+    .index-box {
+      width: 14px;
+      height: 14px;
+      border: 2px solid white;
+      background-color: transparent;
+      transition: background-color 0.3s;
+    }
+      
+    .index-box.active {
+    background-color: white;
+   }    
+  }
+}
+
+/* ---- FIX: asegurar que los botones estén arriba y reciban pointer events ---- */
+.Contenedor-BannerMovies .botonesBanner {
+  position: relative; /* ya lo tienes, pero lo reiteramos para seguridad */
+  z-index: 50;        /* poner por encima de la mayoría de cosas */
+  pointer-events: auto;
+}
+
+/* ---- Evitar que el wrapper .nav-buttons bloquee los botones si se solapa ----
+   Permitimos pointer-events en las flechas e index-boxes individualmente */
+.Contenedor-BannerMovies .nav-buttons {
+  pointer-events: none; /* wrapper NO intercepta el mouse */
+  z-index: 20;          /* por seguridad, debajo de .botonesBanner */
+}
+
+/* ahora activamos pointer-events solo en elementos interactivos dentro de nav-buttons */
+.Contenedor-BannerMovies .nav-buttons .arrow-left,
+.Contenedor-BannerMovies .nav-buttons .arrow-right,
+.Contenedor-BannerMovies .image-index .index-box {
+  pointer-events: auto; /* estos sí reciben click/hover */
+}
+
+/* ---- Mejora de la animación/hover para <a> y flechas ---- */
+.Contenedor-BannerMovies .botonesBanner a,
+.Contenedor-BannerMovies .arrow-left,
+.Contenedor-BannerMovies .arrow-right {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+/* escala suave */
+.Contenedor-BannerMovies .botonesBanner a:hover,
+.Contenedor-BannerMovies .arrow-left:hover,
+.Contenedor-BannerMovies .arrow-right:hover {
+  transform: scale(1.06);
 }

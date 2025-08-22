@@ -5,10 +5,9 @@ export default function BannerTrial() {
       <div className="img-fondo">
         <div>
           <div className="texto-banner">
-          <h2>Start your free trial today!</h2>
+          <h2>¡Empieza tu prueba gratuita hoy!</h2>
           <p>
-            This is a clear and concise call to action that encourages users to
-            sign up for a free trial of StreamVibe.
+            Se trata de una llamada a la acción clara y concisa que anima a los usuarios a registrarse para obtener una prueba gratuita de StreamVibe.
           </p>
           </div>
           <button className="boton-trial">Start Free Trial</button>
