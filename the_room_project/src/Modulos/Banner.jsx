@@ -1,4 +1,3 @@
-import Header from "./Header";
 import "./Banner.css";
 function Banner() {
   return (
