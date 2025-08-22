@@ -1,12 +1,12 @@
-.contenedor {
+.contenedor-preguntas {
   width: 100%;
   padding-inline: 6%;
 }
-.contenedor h2{
+.contenedor-preguntas h2{
   font-size: 38px;
   margin-bottom: 14px;
 }
-.contenedor .parrafo-principal{
+.contenedor-preguntas .parrafo-principal{
   font-size: 18px;
   color:#999;
   margin-bottom: 80px;

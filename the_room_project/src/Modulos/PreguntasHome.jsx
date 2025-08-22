@@ -60,7 +60,7 @@ function PreguntasHome() {
 
   return (
     <>
-      <div className="contenedor">
+      <div className="contenedor-preguntas">
         <h2>Preguntas Frecuentes</h2>
         <p className="parrafo-principal">
           ¿Tienes preguntas? ¡Tenemos respuestas! Revisa nuestra sección de
