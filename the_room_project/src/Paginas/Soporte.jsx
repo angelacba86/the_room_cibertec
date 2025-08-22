@@ -1,4 +1,8 @@
+import BannerTrial from "../Modulos/BannerTrial";
+
 function Soporte() {
-  return <></>;
+  return (
+    <BannerTrial></BannerTrial>
+  )
 }
 export default Soporte;
