@@ -3,6 +3,7 @@ import EnTendencia from '../Modulos/EnTendencia'
 import BannerTrial from '../Modulos/BannerTrial'
 
 
+
 function Movie(){
     return(
         <>

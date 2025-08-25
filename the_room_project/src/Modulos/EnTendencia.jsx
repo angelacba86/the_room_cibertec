@@ -1,281 +1,160 @@
-import"./EnTendencia.css"
-import { GoArrowLeft } from "react-icons/go";
-import { GoArrowRight } from "react-icons/go";
-import { LuClock3 } from "react-icons/lu";
-import { LuEye } from "react-icons/lu";
+import { useState } from "react";
+import "./EnTendencia.css";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { LuClock3, LuEye } from "react-icons/lu";
 import { MdOutlineStarPurple500 } from "react-icons/md";
-function EnTendencia (){
-    return(
-        <>
-        <div className="contenedor1">                       {/*Contenedor principal*/}    
-            <div className="EnTendencia">                   {/*CONTENEDOR EN TENDENCIA*/}
-                <div className="titulo-flechas">            {/*contenedor titulo y fleca*/}    
-                    <h3>
-                        En Tendencia
-                    </h3>
 
-                    <div className="flechas">
-                        <GoArrowLeft className="icono-flecha" />
-                        <div className="botones">
-                            <button></button>
-                            <button></button>
-                            <button></button>
-                        </div>
-                        <GoArrowRight className="icono-flecha" />
+// Datos de películas por sección
+const seccionesPeliculas = [
+  {
+    titulo: "En Tendencia",
+    peliculas: [
+      { id: 1, img: "/cards/card1.png", duracion: "1h 30min", vistas: "2k" },
+      { id: 2, img: "/cards/card2.png", duracion: "1h 57min", vistas: "1.5k" },
+      { id: 3, img: "/cards/card3.png", duracion: "2h 10min", vistas: "1.8k" },
+      { id: 4, img: "/cards/card4.png", duracion: "1h 15min", vistas: "1.4k" },
+      { id: 5, img: "/cards/card5.png", duracion: "2h 10min", vistas: "7k" },
+      { id: 6, img: "/cards/card6.png", duracion: "1h 55min", vistas: "4k" },
+      { id: 7, img: "/cards/card7.png", duracion: "2h 10min", vistas: "1.5k" },
+      { id: 8, img: "/cards/card8.png", duracion: "1h 50min", vistas: "1.4k" },
+    ],
+  },
+  {
+    titulo: "Nuevos Lanzamientos",
+    peliculas: [
+      { id: 1, img: "/cards/cardNL1.png", duracion: "1h 40min", vistas: "5k" },
+      { id: 2, img: "/cards/cardNL2.png", duracion: "2h 00min", vistas: "3.2k" },
+      { id: 3, img: "/cards/cardNL3.png", duracion: "1h 50min", vistas: "4k" },
+      { id: 4, img: "/cards/cardNL4.png", duracion: "2h 15min", vistas: "2.5k" },
+      { id: 5, img: "/cards/cardNL5.png", duracion: "1h 35min", vistas: "6k" },
+      { id: 6, img: "/cards/cardNL6.png", duracion: "2h 05min", vistas: "3k" },
+      { id: 7, img: "/cards/cardNL7.png", duracion: "1h 25min", vistas: "1.5k" },
+      { id: 8, img: "/cards/cardNL8.png", duracion: "2h 25min", vistas: "1.8k" },
+    ],
+  },
+  {
+    titulo: "Películas más vistas",
+    peliculas: [
+      { id: 1, img: "/cards/cardPMM1.png", duracion: "1h 57min", estrellas: 4, votos: "20k" },
+      { id: 2, img: "/cards/cardPMM2.png", duracion: "1h 30min", estrellas: 4, votos: "20k" },
+      { id: 3, img: "/cards/cardPMM3.png", duracion: "1h 42min", estrellas: 4, votos: "20k" },
+      { id: 4, img: "/cards/cardPMM4.png", duracion: "2h 10min", estrellas: 4, votos: "20k" },
+      { id: 5, img: "/cards/cardPMV5.png", duracion: "2h 10min", estrellas: 4, votos: "20k" },
+      { id: 6, img: "/cards/cardPMV6.png", duracion: "2h 10min", estrellas: 4, votos: "20k" },
+      { id: 7, img: "/cards/cardPMV7.png", duracion: "2h 10min", estrellas: 4, votos: "20k" },
+    ],
+  },
+];
 
+// Componente reutilizable para cada fila
+function CarruselFila({ titulo, peliculas }) {
+  // 👉 Para la fila “Películas más vistas” usamos 4 visibles y estilo XL
+  const isGrande = titulo === "Películas más vistas";
+  const ITEMS = isGrande ? 4 : 5;
 
-                    </div>
-                </div>
+  const maxStart = Math.max(0, peliculas.length - ITEMS);
+  const calculatedDots = peliculas.length > ITEMS ? Math.min(3, maxStart + 1) : 1;
 
-                <div className="contenedor-card">                       {/*contenedor de card´s*/}
-                    <div className="card1">                             {/*card´s 1*/}
-                        <a href="#"><img src="/cards/card1.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="tiempo">
-                        <LuClock3 size={18} color="#555" /> 
-                        <p>1h 30min</p>
-                            </div>
-                            <div className="vista">
-                        <LuEye size={18} color="#555" />
-                        <p> 2k</p>
-                            </div>
-                        </div>  
-                    </div>
-                    
-                    <div className="card1">                       {/*card´s 2*/}
-                        <a href="#"><img src="/cards/card2.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="tiempo">
-                        <LuClock3 size={18} color="#555" /> 
-                        <p>1h 57min</p>
-                            </div>
-                            <div className="vista">
-                        <LuEye size={18} color="#555" />
-                        <p> 1.5k</p>
-                            </div>
-                        </div>  
-                    </div>
+  const [startIndex, setStartIndex] = useState(0);
+  const [dotIndex, setDotIndex] = useState(0);
 
-                    <div className="card1">                          {/*card´s 3*/}
-                        <a href="#"><img src="/cards/card3.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="tiempo">
-                        <LuClock3 size={18} color="#555" /> 
-                        <p>2h 10min</p>
-                            </div>
-                            <div className="vista">
-                        <LuEye size={18} color="#555" />
-                        <p> 1.8k</p>
-                            </div>
-                        </div>  
-                    </div>
+  const handleNext = () => {
+    const nextStart = startIndex + 1 <= maxStart ? startIndex + 1 : 0;
+    setStartIndex(nextStart);
+    setDotIndex(calculatedDots > 1 ? (d) => (d + 1) % calculatedDots : 0);
+  };
 
-                    <div className="card1">                             {/*card´s 4*/}
-                        <a href="#"><img src="/cards/card4.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="tiempo">
-                        <LuClock3 size={18} color="#555" /> 
-                        <p>1h 15min</p>
-                            </div>
-                            <div className="vista">
-                        <LuEye size={18} color="#555" />
-                        <p> 1.4k</p>
-                            </div>
-                        </div>  
-                    </div>
+  const handlePrev = () => {
+    const prevStart = startIndex - 1 >= 0 ? startIndex - 1 : maxStart;
+    setStartIndex(prevStart);
+    setDotIndex(calculatedDots > 1 ? (d) => (d - 1 + calculatedDots) % calculatedDots : 0);
+  };
 
+  const handleDotClick = (i) => {
+    setDotIndex(i);
+    const jump = calculatedDots > 1 ? Math.round((i * maxStart) / Math.max(1, calculatedDots - 1)) : 0;
+    setStartIndex(jump);
+  };
 
-                    <div className="card1">                          {/*card´s 5*/}
-                        <a href="#"><img src="/cards/card5.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="tiempo">
-                        <LuClock3 size={18} color="#555" /> 
-                        <p>2h 10min</p>
-                            </div>
-                            <div className="vista">
-                        <LuEye size={18} color="#555" />
-                        <p> 7k</p>
-                            </div>
-                        </div>  
-                    </div>
+  const visibles = peliculas.slice(startIndex, startIndex + ITEMS);
 
-                </div>
-            </div>
-
-
-            <div className="EnTendencia">                   {/*CONTENEDOR NUEVOS LANZAMIENTOS*/}
-                <div className="titulo-flechas">            {/*contenedor titulo y fleca*/}    
-                    <h3>
-                        Nuevos Lanzamientos
-                    </h3>
-
-                    <div className="flechas">
-                        <GoArrowLeft className="icono-flecha" />
-                        <div className="botones">
-                            <button></button>
-                            <button></button>
-                            <button></button>
-                        </div>
-                        <GoArrowRight className="icono-flecha" />
-
-
-                    </div>
-                </div>
-
-                <div className="contenedor-card">                       {/*contenedor de card´s*/}
-                    <div className="card1">                             {/*card´s 1*/}
-                        <a href="#"><img src="/cards/cardNL1.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="publicacion"> 
-                        <p>Publicado el 22 Agosto de 2025</p>
-                            </div>
-                        </div>  
-                    </div>
-                    
-                    <div className="card1">                       {/*card´s 2*/}
-                        <a href="#"><img src="/cards/cardNL2.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="publicacion">
-                        <p>Publicado el 20 Agosto de 2025</p>
-                            </div>
-                        </div>  
-                    </div>
-
-                    <div className="card1">                          {/*card´s 3*/}
-                        <a href="#"><img src="/cards/cardNL3.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="publicacion"> 
-                        <p>Publicado el 19 Agosto de 2025</p>
-                            </div>
-                        </div>  
-                    </div>
-
-                    <div className="card1">                             {/*card´s 4*/}
-                        <a href="#"><img src="/cards/cardNL4.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="publicacion"> 
-                        <p>Publicado el 18 Agosto de 2025</p>
-                            </div>
-
-                        </div>  
-                    </div>
-
-
-                    <div className="card1">                          {/*card´s 5*/}
-                        <a href="#"><img src="/cards/cardNL5.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="publicacion">
-                        <p>Publicado el 18 Agosto de 2025</p>
-                            </div>
-
-                        </div>  
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div className="EnTendencia">                   {/*CONTENEDOR PELICULAS MAS VISTAS*/}
-                <div className="titulo-flechas">            {/*contenedor titulo y fleca*/}    
-                    <h3>
-                        Películas más vistas
-                    </h3>
-
-                    <div className="flechas">
-                        <GoArrowLeft className="icono-flecha" />
-                        <div className="botones">
-                            <button></button>
-                            <button></button>
-                            <button></button>
-                        </div>
-                        <GoArrowRight className="icono-flecha" />
-
-
-                    </div>
-                </div>
-
-                <div className="contenedor-card">                       {/*contenedor de card´s*/}
-                    <div className="card2">                             {/*card´s 1*/}
-                        <a href="#"><img src="/cards/cardPMM1.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="tiempo">
-                        <LuClock3 size={18} color="#555" /> 
-                        <p>1h 57min</p>
-                            </div>
-                            <div className="estrellas">
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 /> 20k
-                            </div>
-                        </div>  
-                    </div>
-                    
-                    <div className="card2">                       {/*card´s 2*/}
-                        <a href="#"><img src="/cards/cardPMM2.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="tiempo">
-                        <LuClock3 size={18} color="#555" /> 
-                        <p>1h 30min</p>
-                            </div>
-                            <div className="estrellas">
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 /> 20k
-                            </div>
-                        </div>  
-                    </div>
-
-                    <div className="card2">                          {/*card´s 3*/}
-                        <a href="#"><img src="/cards/cardPMM3.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="tiempo">
-                        <LuClock3 size={18} color="#555" /> 
-                        <p>1h 42min</p>
-                            </div>
-                            <div className="estrellas">
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 /> 20k
-                            </div>
-                        </div>  
-                    </div>
-
-                    <div className="card2">                             {/*card´s 4*/}
-                        <a href="#"><img src="/cards/cardPMM4.png" alt="car1" /></a>
-                        <div className="duracion">                {/*duracon y view´s*/}
-                            <div className="tiempo">
-                        <LuClock3 size={18} color="#555" /> 
-                        <p>2h 10min</p>
-                            </div>
-                            <div className="estrellas">
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 color="red"/>
-                                <MdOutlineStarPurple500 /> 20k
-                                
-                            </div>
-                        </div>  
-                    </div>
-
-
-                    
-
-                </div>
-            </div>
-
-
-
+  return (
+    <div className={`EnTendencia ${isGrande ? "grande" : ""}`}>
+      <div className="titulo-flechas">
+        <h3>{titulo}</h3>
+        <div className="flechas">
+          <GoArrowLeft className="icono-flecha" onClick={handlePrev} />
+          <div className="botones">
+            {Array.from({ length: calculatedDots }).map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                className={i === dotIndex ? "active" : ""}
+                onClick={() => handleDotClick(i)}
+                aria-label={`Indicador ${i + 1}`}
+              />
+            ))}
+          </div>
+          <GoArrowRight className="icono-flecha" onClick={handleNext} />
         </div>
+      </div>
 
-        </>
-    )
+      <div className="contenedor-card">
+        {visibles.map((peli) => (
+          <div
+            key={`${titulo}-${peli.id}`}
+            className={`card1 ${isGrande ? "card--xl" : ""}`}
+          >
+            <a href="#">
+              <img src={peli.img} alt={`Pelicula ${peli.id}`} />
+            </a>
 
+            <div className="duracion">
+              <div className="tiempo">
+                <LuClock3 size={isGrande ? 20 : 18} color="#555" />
+                <p>{peli.duracion}</p>
+              </div>
+
+              {"estrellas" in peli ? (
+                <div className="estrellas">
+                  {Array.from({ length: 5 }).map((_, idx) => (
+                    <MdOutlineStarPurple500
+                      key={idx}
+                      color={idx < (peli.estrellas ?? 0) ? "red" : "#aaa"}
+                      size={isGrande ? 22 : 18}
+                    />
+                  ))}{" "}
+                  <span>{peli.votos ?? ""}</span>
+                </div>
+              ) : (
+                <div className="vista">
+                  <LuEye size={isGrande ? 20 : 18} color="#555" />
+                  <p>{peli.vistas}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
-export default EnTendencia
+
+// Componente principal que genera todas las filas
+function EnTendencia() {
+  return (
+    <div className="contenedor1">
+      {seccionesPeliculas.map((seccion, i) => (
+        <CarruselFila
+          key={seccion.titulo || i}
+          titulo={seccion.titulo}
+          peliculas={seccion.peliculas}
+        />
+      ))}
+    </div>
+  );
+}
+
+export default EnTendencia;
+
+
