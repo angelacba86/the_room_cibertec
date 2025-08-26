@@ -7,7 +7,7 @@ function Header() {
   return (
     <>
       <header className={isHome ? "header header-home" : "header header-default"}>
-        <img src="./logo.png" alt="The Room" />
+        <img src="/logo.png" alt="The Room" />
         <nav>
           <ul className="nav-header">
             <Link to="/" className={location.pathname==="/" ? "active":"" }>
@@ -23,13 +23,13 @@ function Header() {
         </nav>
         <div className="usuario">
           <a href="#">
-            <img src="./icon-nav.svg" alt="buscar" />
+            <img src="/icon-nav.svg" alt="buscar" />
           </a>
           <a href="#">
-            <img src="./icon-nav2.svg" alt="novedades" />
+            <img src="/icon-nav2.svg" alt="novedades" />
           </a>
           <a href="#">
-            <img src="./icon-nav3.svg" alt="usuario" />
+            <img src="/icon-nav3.svg" alt="usuario" />
           </a>
         </div>
       </header>

@@ -2,19 +2,13 @@
   position: relative;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+  padding: 0 6%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0,0,0,0.85) 35%,
-      rgba(0,0,0,0.6) 60%,
-      rgba(0, 0, 0, 0) 100%
-    ),
-    url("./Banner1Movie.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

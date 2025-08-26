@@ -4,7 +4,7 @@ import { IoLanguage } from "react-icons/io5";
 import { PiCirclesFour } from "react-icons/pi";
 
 import "./MovieDetailContent.css";
-function MovieDetailContent() {
+function MovieDetailContent({ movie }) {
   const photoProfile = "https://i.pravatar.cc/150?img=";
   const arrayNum = [1, 2, 3, 4, 5, 6, 7, 8];
   return (
@@ -13,11 +13,7 @@ function MovieDetailContent() {
         <div className="detalles">
           <div className="descripcion">
             <h5>Descripción</h5>
-            <p>
-              A fiery young man clashes with an unflinching forest officer in a
-              south Indian village where spirituality, fate and folklore rule
-              the lands.
-            </p>
+            <p>{movie.description}</p>
           </div>
           <div className="cast">
             <h5>Cast</h5>
@@ -31,56 +27,32 @@ function MovieDetailContent() {
           </div>
           <div className="reviews">
             <h5>Reviews</h5>
-            <div>
-              <div className="review-card">
-                <div className="review-card-head">
-                  <div className="user-data">
-                    <h6>Nombre</h6>
-                    <p>Pais</p>
+            <div className="reviews-container">
+              {movie.reviews?.map((review, index) => (
+                <div className="review-card" key={index}>
+                  <div className="review-card-head">
+                    <div className="user-data">
+                      <h6>{review.nombre}</h6>
+                      <p>{review.pais}</p>
+                    </div>
+                    <div className="stars">
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <small>{review.rating}</small>
+                    </div>
                   </div>
-                  <div className="stars">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <small>5</small>
-                  </div>
-                </div>
-                <div className="review-card-body">
-                  <p>
-                    This movie was recommended to me by a very dear friend who
-                    went for the movie by herself. I went to the cinemas to
-                    watch but had a houseful board so couldn’t watch it.
-                  </p>
-                </div>
-              </div>
-              <div className="review-card">
-                <div className="review-card-head">
-                  <div className="user-data">
-                    <h6>Nombre</h6>
-                    <p>Pais</p>
-                  </div>
-                  <div className="stars">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <small>5</small>
+                  <div className="review-card-body">
+                    <p>{review.mensaje}</p>
                   </div>
                 </div>
-                <div className="review-card-body">
-                  <p>
-                    This movie was recommended to me by a very dear friend who
-                    went for the movie by herself. I went to the cinemas to
-                    watch but had a houseful board so couldn’t watch it.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
+
         <div className="general">
           <div className="seccion">
             <div>
@@ -89,7 +61,7 @@ function MovieDetailContent() {
                 Año de Lanzamiento
               </h5>
             </div>
-            <p>2025</p>
+            <p>{movie.year}</p>
           </div>
           <div className="seccion">
             <h5>
@@ -97,8 +69,9 @@ function MovieDetailContent() {
               Lenguajes Disponibles
             </h5>
             <div>
-              <div>Ingles</div>
-              <div>Español</div>
+              {movie.lenguajesDisponibles?.map((lengua, i) => (
+                <div key={i}>{lengua}</div>
+              ))}
             </div>
           </div>
           <div className="seccion">
@@ -113,7 +86,7 @@ function MovieDetailContent() {
                   <FaStar />
                   <FaStar />
                   <FaStar />
-                  <FaStar /> <small>4</small>
+                  <FaStar /> <small>{movie.rating}</small>
                 </div>
               </div>
               <div className="rating-card">
@@ -122,7 +95,7 @@ function MovieDetailContent() {
                   <FaStar />
                   <FaStar />
                   <FaStar />
-                  <FaStar /> <small>4</small>
+                  <FaStar /> <small>{movie.rating}</small>
                 </div>
               </div>
             </div>
@@ -133,8 +106,9 @@ function MovieDetailContent() {
               Géneros
             </h5>
             <div>
-              <div>genero1</div>
-              <div>genero2</div>
+              {movie.generos?.map((genre, i) => (
+                <div key={i}>{genre}</div>
+              ))}
             </div>
           </div>
         </div>
@@ -142,4 +116,5 @@ function MovieDetailContent() {
     </>
   );
 }
+
 export default MovieDetailContent;

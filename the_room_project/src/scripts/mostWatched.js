@@ -5,16 +5,26 @@ export const mostWatched = [
       "Animación china récord, una aventura mágica que rompió box office a nivel global.",
     cast: ["Voces Chinas A", "B"],
     reviews: [
-      { nombre: "Xia", pais: "China", calificacion: 9.0, mensaje: "Espectacular y emotiva." },
-      { nombre: "Hiro", pais: "Japón", calificacion: 8.8, mensaje: "Animación impecable y conmovedora." }
+      {
+        nombre: "Xia",
+        pais: "China",
+        calificacion: 9.0,
+        mensaje: "Espectacular y emotiva.",
+      },
+      {
+        nombre: "Hiro",
+        pais: "Japón",
+        calificacion: 8.8,
+        mensaje: "Animación impecable y conmovedora.",
+      },
     ],
-    año: 2025,
+    year: 2025,
     lenguajesDisponibles: ["Mandarín", "Inglés", "Español"],
     generos: ["Animación", "Fantasia", "Aventura"],
     duracion: 110,
     cantidadVistas: 1900000000,
     poster: "/most_watched/poster01.png",
-    banner: "/most_watched/banner01.png"
+    banner: "/most_watched/banner01.png",
   },
   {
     title: "Lilo & Stitch (2025)",
@@ -22,16 +32,26 @@ export const mostWatched = [
       "Remake live-action que revivió el viaje de Lilo y Stitch con corazón y humor.",
     cast: ["Actriz Lilo", "Alien"],
     reviews: [
-      { nombre: "Ana", pais: "España", calificacion: 8.7, mensaje: "Tierna y nostálgica." },
-      { nombre: "Sofía", pais: "México", calificacion: 8.5, mensaje: "Muy fiel al espíritu original." }
+      {
+        nombre: "Ana",
+        pais: "España",
+        calificacion: 8.7,
+        mensaje: "Tierna y nostálgica.",
+      },
+      {
+        nombre: "Sofía",
+        pais: "México",
+        calificacion: 8.5,
+        mensaje: "Muy fiel al espíritu original.",
+      },
     ],
-    año: 2025,
+    year: 2025,
     lenguajesDisponibles: ["Inglés", "Español"],
     generos: ["Aventura", "Comedia", "Familia"],
     duracion: 115,
-    cantidadVistas: 1030000000,
+    cantidadVistas: "102k",
     poster: "/most_watched/poster02.png",
-    banner: "/most_watched/banner02.png"
+    banner: "/most_watched/banner02.png",
   },
   {
     title: "A Minecraft Movie",
@@ -39,16 +59,26 @@ export const mostWatched = [
       "Película basada en el famoso juego, que exploró mundos pixelados con gran fidelidad.",
     cast: ["Avatares A", "B"],
     reviews: [
-      { nombre: "Carlos", pais: "México", calificacion: 8.5, mensaje: "Divertida y visualmente fiel." },
-      { nombre: "Elena", pais: "Colombia", calificacion: 8.3, mensaje: "Perfecta para fans de Minecraft." }
+      {
+        nombre: "Carlos",
+        pais: "México",
+        calificacion: 8.5,
+        mensaje: "Divertida y visualmente fiel.",
+      },
+      {
+        nombre: "Elena",
+        pais: "Colombia",
+        calificacion: 8.3,
+        mensaje: "Perfecta para fans de Minecraft.",
+      },
     ],
-    año: 2025,
+    year: 2025,
     lenguajesDisponibles: ["Inglés", "Español", "Portugués"],
     generos: ["Animación", "Aventura", "Familiar"],
     duracion: 105,
-    cantidadVistas: 955000000,
+    cantidadVistas: "95k",
     poster: "/most_watched/poster03.png",
-    banner: "/most_watched/banner03.png"
+    banner: "/most_watched/banner03.png",
   },
   {
     title: "Jurassic World Rebirth",
@@ -56,16 +86,26 @@ export const mostWatched = [
       "La cuarta entrega de la saga, con dinosaurios y ciencia en una lucha por salvar especies.",
     cast: ["Scarlett Johansson", "Mahershala Ali"],
     reviews: [
-      { nombre: "Lucía", pais: "Perú", calificacion: 8.2, mensaje: "Entretenida y visualmente impresionante." },
-      { nombre: "Javier", pais: "Argentina", calificacion: 8.4, mensaje: "Una gran mezcla de acción y nostalgia." }
+      {
+        nombre: "Lucía",
+        pais: "Perú",
+        calificacion: 8.2,
+        mensaje: "Entretenida y visualmente impresionante.",
+      },
+      {
+        nombre: "Javier",
+        pais: "Argentina",
+        calificacion: 8.4,
+        mensaje: "Una gran mezcla de acción y nostalgia.",
+      },
     ],
-    año: 2025,
+    year: 2025,
     lenguajesDisponibles: ["Inglés", "Español"],
     generos: ["Acción", "Ciencia ficción", "Aventura"],
     duracion: 133,
-    cantidadVistas: 799000000,
+    cantidadVistas: "96k",
     poster: "/most_watched/poster04.png",
-    banner: "/most_watched/banner04.png"
+    banner: "/most_watched/banner04.png",
   },
   {
     title: "How to Train Your Dragon",
@@ -73,16 +113,26 @@ export const mostWatched = [
       "Nueva parte de la amada saga animada, con dragones y corazones fieros.",
     cast: ["Voces Dragon A", "B"],
     reviews: [
-      { nombre: "Pedro", pais: "Chile", calificacion: 9.0, mensaje: "Emocionante y épica." },
-      { nombre: "Fernanda", pais: "Ecuador", calificacion: 8.9, mensaje: "Hermoso cierre para la saga." }
+      {
+        nombre: "Pedro",
+        pais: "Chile",
+        calificacion: 9.0,
+        mensaje: "Emocionante y épica.",
+      },
+      {
+        nombre: "Fernanda",
+        pais: "Ecuador",
+        calificacion: 8.9,
+        mensaje: "Hermoso cierre para la saga.",
+      },
     ],
-    año: 2025,
+    year: 2025,
     lenguajesDisponibles: ["Inglés", "Español", "Francés"],
     generos: ["Animación", "Aventura", "Fantasía"],
     duracion: 100,
-    cantidadVistas: 623000000,
+    cantidadVistas: "63k",
     poster: "/most_watched/poster05.png",
-    banner: "/most_watched/banner05.png"
+    banner: "/most_watched/banner05.png",
   },
   {
     title: "Mission: Impossible – The Final Reckoning",
@@ -90,16 +140,26 @@ export const mostWatched = [
       "Ethan Hunt en su última misión que rompió récords de taquilla y adrenalina pura.",
     cast: ["Tom Cruise", "Ving Rhames", "Hayley Atwell"],
     reviews: [
-      { nombre: "Ana", pais: "Argentina", calificacion: 9.2, mensaje: "Espectacular de principio a fin." },
-      { nombre: "Mateo", pais: "Uruguay", calificacion: 9.0, mensaje: "Un cierre perfecto para la saga." }
+      {
+        nombre: "Ana",
+        pais: "Argentina",
+        calificacion: 9.2,
+        mensaje: "Espectacular de principio a fin.",
+      },
+      {
+        nombre: "Mateo",
+        pais: "Uruguay",
+        calificacion: 9.0,
+        mensaje: "Un cierre perfecto para la saga.",
+      },
     ],
-    año: 2025,
+    year: 2025,
     lenguajesDisponibles: ["Inglés", "Español"],
     generos: ["Acción", "Thriller"],
     duracion: 145,
-    cantidadVistas: 596000000,
+    cantidadVistas: "56k",
     poster: "/most_watched/poster06.png",
-    banner: "/most_watched/banner06.png"
+    banner: "/most_watched/banner06.png",
   },
   {
     title: "Superman (2025)",
@@ -107,16 +167,26 @@ export const mostWatched = [
       "Reinicio heroico del mítico Hombre de Acero, explorando su origen y destino.",
     cast: ["Actor Superman", "Actriz"],
     reviews: [
-      { nombre: "María", pais: "México", calificacion: 8.9, mensaje: "Imponente y emocionante." },
-      { nombre: "Luis", pais: "España", calificacion: 8.7, mensaje: "Gran inicio para una nueva saga." }
+      {
+        nombre: "María",
+        pais: "México",
+        calificacion: 8.9,
+        mensaje: "Imponente y emocionante.",
+      },
+      {
+        nombre: "Luis",
+        pais: "España",
+        calificacion: 8.7,
+        mensaje: "Gran inicio para una nueva saga.",
+      },
     ],
-    año: 2025,
+    year: 2025,
     lenguajesDisponibles: ["Inglés", "Español"],
     generos: ["Acción", "Ciencia ficción", "Aventura"],
     duracion: 130,
-    cantidadVistas: 578000000,
+    cantidadVistas: "87k",
     poster: "/most_watched/poster07.png",
-    banner: "/most_watched/banner07.png"
+    banner: "/most_watched/banner07.png",
   },
   {
     title: "F1",
@@ -124,15 +194,25 @@ export const mostWatched = [
       "Drama de alta velocidad ambientado en el mundo de la Fórmula 1, con Brad Pitt al volante.",
     cast: ["Brad Pitt", "Piloto B"],
     reviews: [
-      { nombre: "Diego", pais: "Uruguay", calificacion: 8.4, mensaje: "Intenso y visualmente impactante." },
-      { nombre: "Renata", pais: "Brasil", calificacion: 8.5, mensaje: "Una experiencia vibrante en la pista." }
+      {
+        nombre: "Diego",
+        pais: "Uruguay",
+        calificacion: 8.4,
+        mensaje: "Intenso y visualmente impactante.",
+      },
+      {
+        nombre: "Renata",
+        pais: "Brasil",
+        calificacion: 8.5,
+        mensaje: "Una experiencia vibrante en la pista.",
+      },
     ],
-    año: 2025,
+    year: 2025,
     lenguajesDisponibles: ["Inglés", "Español"],
     generos: ["Drama", "Deportes", "Acción"],
     duracion: 125,
-    cantidadVistas: 570000000,
+    cantidadVistas: "87k",
     poster: "/most_watched/poster08.png",
-    banner: "/most_watched/banner08.png"
-  }
+    banner: "/most_watched/banner08.png",
+  },
 ];

@@ -1,225 +1,198 @@
-* { box-sizing: border-box; }
-.contenedor1{
-
+* {
+  box-sizing: border-box;
+}
+.contenedor1 {
 }
 
-.contenedor-card{
-    display: flex;
-    flex-wrap: nowrap;          /* permite salto de línea */
-    gap: 17px;
-    justify-content: flex-start;
-    margin-bottom: 50px;
-    
-    
+.contenedor-card {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap; /* permite salto de línea */
+  gap: 17px;
+  justify-content: flex-start;
+  margin-bottom: 50px;
 
-
-    /*display: flex;
+  /*display: flex;
     justify-content: space-between;
     gap: 20px;*/
 }
 
-.titulo-flechas{
-    height: 88px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 7px;
-    margin-top: 7px;
+.titulo-flechas {
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+  margin-top: 7px;
 
-    h3{
-        align-items: center;
-        font-family: Manrope;
-        font-weight: 700;
-        font-size: 28px;
-        
-    }
+  h3 {
+    align-items: center;
+    font-family: Manrope;
+    font-weight: 700;
+    font-size: 28px;
+  }
 }
 
 .flechas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 50px;
+  gap: 16px;
+  font-size: 42px;
+  border-radius: 10px;
+  background-color: rgba(15, 15, 15, 1);
+  .icono-flecha {
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: rgba(31, 31, 31, 1);
+  }
+  .botones {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 230px;
-    height: 50px;
-    gap: 16px;
-    font-size: 42px;
-    border-radius: 10px;
-    background-color: rgba(15, 15, 15, 1);
-    .icono-flecha{
-        border-radius: 12px;
-        cursor: pointer;
-        background-color: rgba(31, 31, 31, 1)
-        
-        
+    gap: 2px;
+    button {
+      width: 23px;
+      height: 4px;
     }
-    .botones{
-        display: flex;
-        align-items: center;
-        gap: 2px;
-        button{
-            width: 23px;
-            height: 4px;
-        }
-    }
+  }
 }
 
 /*Contenedor de trajetas*/
 
-.card1{
-    /*width: 283px;
+.card1 {
+  /*width: 283px;
     height: 372px;*/
-    width: 224px;
-    height: 305px;
-    border-radius: 12px;
-    text-align: center;
-    background-color: rgba(38, 38, 38, 1);
-    transition: transform 0.3s ease;
-    overflow: hidden;
-    img{
-        /*padding: 20px 20px 20px 20px;*/
-        width: 200px;
-        height: 238px;
-        margin-inline: 10px;
-        margin-top: 10px;
-        margin-bottom: 5px;
-    }
-    .duracion{
-        display: flex;
-        justify-content: space-between;
-        padding-inline: 10px;
-        
-        
-        p{
-            font-size: 11px;
-            padding-top: 3px;
-            
-        }
-        
-
-    }
-}
-
-.tiempo{
+  width: 224px;
+  height: 305px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: rgba(38, 38, 38, 1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  img {
+    /*padding: 20px 20px 20px 20px;*/
+    width: 200px;
+    height: 238px;
+    margin-inline: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .duracion {
     display: flex;
-    text-align: center;
-    width: 108;
-    height: 36;
-    gap: 5px;
-    padding: 8px;
-    border-radius: 50px;
-    background-color: rgba(20, 20, 20, 1);
-    width: 92px;
-    height: 30px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    margin-top: 5px;
-   
+    justify-content: space-between;
+    padding-inline: 10px;
 
-}
-.vista{
-    display: flex;
-    gap: 5px;
-    padding-inline: 6px;
-    border-radius: 50px;
-    background-color: rgba(20, 20, 20, 1);
-    width: 60px;
-    height: 30px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    margin-top: 5px;
-    
-
-}
-
-.card1:hover{
-    transform: scale(1.07)
-
-}
-.icono-flecha:hover{
-    background-color: rgb(54, 54, 54)
-}
-
-
-
-
-
-
-.card2{
-    width: 384px;
-    height: 388px;
-    border-radius: 12px;
-    text-align: center;
-    background-color: rgba(38, 38, 38, 1);
-    transition: transform 0.3s ease;
-    img{
-        padding: 10px 10px 1px 10px;
-        width: 280px;
+    p {
+      font-size: 11px;
+      padding-top: 3px;
     }
-    .duracion{
-        display: flex;
-        justify-content: space-between;
-        padding-left: 20px;
-        padding-right: 20px;
-        p{
-            font-size: 11px;
-            padding-top: 3px;
-            
-        }
-        
-
-    }
+  }
 }
 
-.card2:hover{
-    transform: scale(1.02)
+.tiempo {
+  display: flex;
+  text-align: center;
+  width: 108;
+  height: 36;
+  gap: 5px;
+  padding: 8px;
+  border-radius: 50px;
+  background-color: rgba(20, 20, 20, 1);
+  width: 92px;
+  height: 30px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: 5px;
+}
+.vista {
+  display: flex;
+  gap: 5px;
+  padding-inline: 6px;
+  border-radius: 50px;
+  background-color: rgba(20, 20, 20, 1);
+  width: 60px;
+  height: 30px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: 5px;
 }
 
-.publicacion{
-
-    border-radius: 50px;
-    background-color: rgba(20, 20, 20, 1);
-    width: 250px;
-    height: 30px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    margin-top: 5px;
+.card1:hover {
+  transform: scale(1.07);
+}
+.icono-flecha:hover {
+  background-color: rgb(54, 54, 54);
 }
 
-.estrellas{
+.card2 {
+  width: 384px;
+  height: 388px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: rgba(38, 38, 38, 1);
+  transition: transform 0.3s ease;
+  img {
+    padding: 10px 10px 1px 10px;
+    width: 280px;
+  }
+  .duracion {
     display: flex;
-    align-items: center;
-    gap: 1px;
-    padding-inline: 6px;
-    border-radius: 50px;
-    background-color: rgba(20, 20, 20, 1);
-    width: 108px;
-    height: 30px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    margin-top: 5px;
-    font-size: 13px;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    p {
+      font-size: 11px;
+      padding-top: 3px;
+    }
+  }
 }
 
+.card2:hover {
+  transform: scale(1.02);
+}
 
+.publicacion {
+  border-radius: 50px;
+  background-color: rgba(20, 20, 20, 1);
+  width: 250px;
+  height: 30px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: 5px;
+}
 
-.botones button{
-  width: 28px; 
+.estrellas {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  padding-inline: 6px;
+  border-radius: 50px;
+  background-color: rgba(20, 20, 20, 1);
+  width: 108px;
+  height: 30px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.botones button {
+  width: 28px;
   height: 6px;
   background: #6b6b6b;
-  border: none; border-radius: 999px;
-  cursor: pointer; opacity: .6;
-  transition: transform .15s, opacity .15s, background .15s;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: transform 0.15s, opacity 0.15s, background 0.15s;
 }
-.botones button.active{
+.botones button.active {
   background: #e50914; /* rojo */
-  opacity: 1; transform: scale(1.06);
+  opacity: 1;
+  transform: scale(1.06);
 }
-
-
-
-
-
-
 
 /* =========================
    Tarjeta grande (Películas más vistas)

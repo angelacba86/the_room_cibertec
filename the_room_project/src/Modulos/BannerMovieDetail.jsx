@@ -1,30 +1,35 @@
 import "./BannerMoviesDetail.css"
-function BannerMovieDetail() {
+function BannerMovieDetail({ movie }) {
+  if (!movie) return null;
+  console.log(movie.banner)
   return (
-    <div className="Contenedor-BannerMovies">
+    <div className="Contenedor-BannerMovies" style={{
+        backgroundImage: `linear-gradient(
+          to top,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0.85) 35%,
+          rgba(0, 0, 0, 0.6) 60%,
+          rgba(0, 0, 0, 0) 100%
+        ), url(${movie.banner})`,
+      }} >
       <div className="TextoBannerMovies">
-        <h1>Avengers : Endgame</h1>
-        <p>
-          Con la ayuda de los aliados restantes, los Vengadores deben reunirse
-          una vez más para deshacer las acciones de Thanos y deshacer el caos en
-          el universo, sin importar las consecuencias que puedan aguardar y sin
-          importar a quién se enfrenten... Vengar a los caídos.
-        </p>
+        <h1>{movie.title}</h1>
+        <p>{movie.description}</p>
       </div>
       <div className="botonesBanner">
         <a className="btnPlay">
-          <img src="./icon-play.png" alt="play" /> Play Now
+          <img src="/icon-play.png" alt="play" /> Play Now
         </a>
         <a>
-          <img src="./Icon+BanneMovies.png" alt="" />
+          <img src="/Icon+BanneMovies.png" alt="" />
         </a>
         <a>
-          <img src="./IconLikeBanneMovies.png" alt="" />
+          <img src="/IconLikeBanneMovies.png" alt="" />
         </a>
         <a>
-          <img src="./IconAudioBanneMovies.png" alt="" />
+          <img src="/IconAudioBanneMovies.png" alt="" />
         </a>
-      </div>.
+      </div>
     </div>
   );
 }

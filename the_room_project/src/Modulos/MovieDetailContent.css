@@ -4,24 +4,27 @@
   align-items: stretch !important;
 }
 
-/* 🔹 contenedor principal en flex */
-.contenedor.detail {
+/* 🔹 clave: el contenedor en flex para que columnas tengan mismo alto */
+.contenedor.detail,
+.detail {
   display: flex;
-  align-items: stretch; /* fuerza a que las columnas tengan mismo alto */
+  align-items: stretch !important;
   gap: 30px;
+}
+
+.detalles,
+.general {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
 }
 
 .detalles {
   flex: 0 0 75%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px; /* reemplaza margin-bottom en las cajitas */
 }
 
 .general {
   flex: 0 0 25%;
-  display: flex;
-  flex-direction: column;
   background-color: #262626;
   border-radius: 12px;
   border: 1px solid #262626;
@@ -35,6 +38,7 @@
   padding: 30px;
   font-weight: 500;
   line-height: 150%;
+  margin-bottom: 30px;
 }
 
 .general h5,
@@ -67,15 +71,17 @@
   margin-bottom: 40px;
 }
 
+.descripcion h5 {
+  margin-bottom: 14px;
+}
 .reviews {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* mantiene las reviews en columna */
 }
-
-.reviews div {
+.reviews-container {
   display: flex;
+  flex-direction: row;
 }
-
 .review-card {
   display: flex;
   flex-direction: column;
@@ -90,6 +96,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -108,6 +115,7 @@
 }
 
 .stars {
+  display: flex;
   padding: 6px 10px;
   align-items: center;
   gap: 4px;
@@ -165,34 +173,3 @@
 .general .seccion .rating-card div small {
   color: #999;
 }
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .contenedor.detail {
-    flex-direction: column;
-    align-items: flex-start; /* en column conviene esto */
-  }
-
-  .general {
-    order: -1; /* sube arriba */
-    width: 100%;
-    flex: unset;
-    margin-bottom: 20px;
-  }
-
-  .detalles {
-    order: 0;
-    width: 100%;
-    flex: unset;
-  }
-
-  /* ✅ solo los grupos de tarjetas en columna */
-  .reviews > div {
-    flex-direction: column;
-  }
-
-  .review-card {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-}
-

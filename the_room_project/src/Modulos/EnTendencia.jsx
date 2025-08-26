@@ -4,46 +4,45 @@ import "./EnTendencia.css";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { LuClock3, LuEye } from "react-icons/lu";
 import { MdOutlineStarPurple500 } from "react-icons/md";
+import { allMovies } from "../scripts";
 
-// Datos de películas por sección
+// Agrupa las películas por sección usando los datos reales
 const seccionesPeliculas = [
   {
     titulo: "En Tendencia",
-    peliculas: [
-      { id: 1, img: "/cards/card1.png", duracion: "1h 30min", vistas: "2k" },
-      { id: 2, img: "/cards/card2.png", duracion: "1h 57min", vistas: "1.5k" },
-      { id: 3, img: "/cards/card3.png", duracion: "2h 10min", vistas: "1.8k" },
-      { id: 4, img: "/cards/card4.png", duracion: "1h 15min", vistas: "1.4k" },
-      { id: 5, img: "/cards/card5.png", duracion: "2h 10min", vistas: "7k" },
-      { id: 6, img: "/cards/card6.png", duracion: "1h 55min", vistas: "4k" },
-      { id: 7, img: "/cards/card7.png", duracion: "2h 10min", vistas: "1.5k" },
-      { id: 8, img: "/cards/card8.png", duracion: "1h 50min", vistas: "1.4k" },
-    ],
+    peliculas: allMovies
+      .filter((m) => m.poster?.startsWith("/trending/"))
+      .map((m, idx) => ({
+        id: idx + 1,
+        img: m.poster,
+        duracion: `${Math.floor(m.duracion / 60)}h ${m.duracion % 60}min`,
+        vistas: m.cantidadVistas,
+      })),
   },
   {
     titulo: "Nuevos Lanzamientos",
-    peliculas: [
-      { id: 1, img: "/cards/cardNL1.png", duracion: "1h 40min", vistas: "5k" },
-      { id: 2, img: "/cards/cardNL2.png", duracion: "2h 00min", vistas: "3.2k" },
-      { id: 3, img: "/cards/cardNL3.png", duracion: "1h 50min", vistas: "4k" },
-      { id: 4, img: "/cards/cardNL4.png", duracion: "2h 15min", vistas: "2.5k" },
-      { id: 5, img: "/cards/cardNL5.png", duracion: "1h 35min", vistas: "6k" },
-      { id: 6, img: "/cards/cardNL6.png", duracion: "2h 05min", vistas: "3k" },
-      { id: 7, img: "/cards/cardNL7.png", duracion: "1h 25min", vistas: "1.5k" },
-      { id: 8, img: "/cards/cardNL8.png", duracion: "2h 25min", vistas: "1.8k" },
-    ],
+    peliculas: allMovies
+      .filter((m) => m.poster?.startsWith("/last_release/"))
+      .map((m, idx) => ({
+        id: idx + 1,
+        img: m.poster,
+        duracion: `${Math.floor(m.duracion / 60)}h ${m.duracion % 60}min`,
+        vistas: m.cantidadVistas,
+        estrellas: m.rating,
+        votos: m.cantidadVistas,
+      })),
   },
   {
     titulo: "Películas más vistas",
-    peliculas: [
-      { id: 1, img: "/cards/cardPMM1.png", duracion: "1h 57min", estrellas: 4, votos: "20k" },
-      { id: 2, img: "/cards/cardPMM2.png", duracion: "1h 30min", estrellas: 4, votos: "20k" },
-      { id: 3, img: "/cards/cardPMM3.png", duracion: "1h 42min", estrellas: 4, votos: "20k" },
-      { id: 4, img: "/cards/cardPMM4.png", duracion: "2h 10min", estrellas: 4, votos: "20k" },
-      { id: 5, img: "/cards/cardPMV5.png", duracion: "2h 10min", estrellas: 4, votos: "20k" },
-      { id: 6, img: "/cards/cardPMV6.png", duracion: "2h 10min", estrellas: 4, votos: "20k" },
-      { id: 7, img: "/cards/cardPMV7.png", duracion: "2h 10min", estrellas: 4, votos: "20k" },
-    ],
+    peliculas: allMovies
+      .filter((m) => m.poster?.startsWith("/most_watched/"))
+      .map((m, idx) => ({
+        id: idx + 1,
+        img: m.poster,
+        duracion: `${Math.floor(m.duracion / 60)}h ${m.duracion % 60}min`,
+        estrellas: 4, // Puedes ajustar según tu lógica
+        votos: m.cantidadVistas
+      })),
   },
 ];
 
@@ -54,7 +53,8 @@ function CarruselFila({ titulo, peliculas }) {
   const ITEMS = isGrande ? 4 : 5;
 
   const maxStart = Math.max(0, peliculas.length - ITEMS);
-  const calculatedDots = peliculas.length > ITEMS ? Math.min(3, maxStart + 1) : 1;
+  const calculatedDots =
+    peliculas.length > ITEMS ? Math.min(3, maxStart + 1) : 1;
 
   const [startIndex, setStartIndex] = useState(0);
   const [dotIndex, setDotIndex] = useState(0);
@@ -68,12 +68,17 @@ function CarruselFila({ titulo, peliculas }) {
   const handlePrev = () => {
     const prevStart = startIndex - 1 >= 0 ? startIndex - 1 : maxStart;
     setStartIndex(prevStart);
-    setDotIndex(calculatedDots > 1 ? (d) => (d - 1 + calculatedDots) % calculatedDots : 0);
+    setDotIndex(
+      calculatedDots > 1 ? (d) => (d - 1 + calculatedDots) % calculatedDots : 0
+    );
   };
 
   const handleDotClick = (i) => {
     setDotIndex(i);
-    const jump = calculatedDots > 1 ? Math.round((i * maxStart) / Math.max(1, calculatedDots - 1)) : 0;
+    const jump =
+      calculatedDots > 1
+        ? Math.round((i * maxStart) / Math.max(1, calculatedDots - 1))
+        : 0;
     setStartIndex(jump);
   };
 
@@ -102,40 +107,41 @@ function CarruselFila({ titulo, peliculas }) {
 
       <div className="contenedor-card">
         {visibles.map((peli) => (
-            <Link to="/contenido/detalle">
-          <div
-            key={`${titulo}-${peli.id}`}
-            className={`card1 ${isGrande ? "card--xl" : ""}`}
-          >
-            <a href="#">
-              <img src={peli.img} alt={`Pelicula ${peli.id}`} />
-            </a>
+          <Link to={`/contenido/detalle/${peli.id}`}>
+            <div
+              key={`${titulo}-${peli.id}`}
+              className={`card1 ${isGrande ? "card--xl" : ""}`}
+            >
+              <a href="#">
+                <img src={peli.img} alt={`Pelicula ${peli.id}`} />
+              </a>
 
-            <div className="duracion">
-              <div className="tiempo">
-                <LuClock3 size={isGrande ? 20 : 18} color="#555" />
-                <p>{peli.duracion}</p>
+              <div className="duracion">
+                <div className="tiempo">
+                  <LuClock3 size={isGrande ? 20 : 18} color="#555" />
+                  <p>{peli.duracion}</p>
+                </div>
+
+                {"estrellas" in peli ? (
+                  <div className="estrellas">
+                    {Array.from({ length: 5 }).map((_, idx) => (
+                      <MdOutlineStarPurple500
+                        key={idx}
+                        color={idx < (peli.estrellas ?? 0) ? "red" : "#aaa"}
+                        size={isGrande ? 22 : 18}
+                      />
+                    ))}{" "}
+                    <span>{peli.votos ?? ""}</span>
+                  </div>
+                ) : (
+                  <div className="vista">
+                    <LuEye size={isGrande ? 20 : 18} color="#555" />
+                    <p>{peli.vistas}</p>
+                  </div>
+                )}
               </div>
-
-              {"estrellas" in peli ? (
-                <div className="estrellas">
-                  {Array.from({ length: 5 }).map((_, idx) => (
-                    <MdOutlineStarPurple500
-                      key={idx}
-                      color={idx < (peli.estrellas ?? 0) ? "red" : "#aaa"}
-                      size={isGrande ? 22 : 18}
-                    />
-                  ))}{" "}
-                  <span>{peli.votos ?? ""}</span>
-                </div>
-              ) : (
-                <div className="vista">
-                  <LuEye size={isGrande ? 20 : 18} color="#555" />
-                  <p>{peli.vistas}</p>
-                </div>
-              )}
             </div>
-          </div></Link>
+          </Link>
         ))}
       </div>
     </div>
@@ -158,5 +164,3 @@ function EnTendencia() {
 }
 
 export default EnTendencia;
-
-
