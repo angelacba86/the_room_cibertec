@@ -1,0 +1,198 @@
+.detail {
+  box-shadow: none !important;
+  border: none !important;
+  align-items: stretch !important;
+}
+
+/* 🔹 contenedor principal en flex */
+.contenedor.detail {
+  display: flex;
+  align-items: stretch; /* fuerza a que las columnas tengan mismo alto */
+  gap: 30px;
+}
+
+.detalles {
+  flex: 0 0 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* reemplaza margin-bottom en las cajitas */
+}
+
+.general {
+  flex: 0 0 25%;
+  display: flex;
+  flex-direction: column;
+  background-color: #262626;
+  border-radius: 12px;
+  border: 1px solid #262626;
+  padding: 30px;
+}
+
+.detalles > div {
+  background-color: #262626;
+  border-radius: 12px;
+  border: 1px solid #262626;
+  padding: 30px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.general h5,
+.detalles > div h5 {
+  font-size: 18px;
+  color: #999;
+}
+
+.detalles > div p {
+  font-size: 18px;
+  color: #fff;
+}
+
+.detalles .review-card-body p {
+  color: #999;
+}
+
+.detalles .cast img {
+  height: 100px;
+  flex: 1 0 0;
+  border-radius: 12px;
+  margin-right: 13px;
+}
+
+.cast h5 {
+  margin-bottom: 14px;
+}
+
+.reviews h5 {
+  margin-bottom: 40px;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews div {
+  display: flex;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: #0f0f0f;
+  border-radius: 12px;
+  border: 1px solid #262626;
+  margin-right: 20px;
+}
+
+.review-card-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.review-card-head .user-data h6 {
+  color: #fff;
+  font-size: 20px;
+}
+
+.review-card-head .user-data p {
+  color: #999;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.stars {
+  padding: 6px 10px;
+  align-items: center;
+  gap: 4px;
+  background-color: #141414;
+  border-radius: 51px;
+  border: 1px solid #262626; /* ✅ corregido */
+  color: #e50000;
+}
+
+.stars small {
+  color: #999;
+  font-size: 18px;
+}
+
+.general div p {
+  font-size: 20px;
+}
+
+.general .seccion {
+  margin-bottom: 30px;
+}
+
+.general .seccion > div {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.general .seccion > div > div {
+  padding: 8px 14px;
+  background-color: #141414;
+  border: 2px solid #262626;
+  border-radius: 8px;
+}
+
+.general .seccion .rating-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 7px;
+}
+
+.general .seccion .rating-card h5 {
+  color: #fff;
+}
+
+.general .seccion .rating-card div {
+  display: flex;
+  font-weight: 20px;
+  color: #e50000;
+  gap: 2px;
+  align-items: center;
+}
+
+.general .seccion .rating-card div small {
+  color: #999;
+}
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .contenedor.detail {
+    flex-direction: column;
+    align-items: flex-start; /* en column conviene esto */
+  }
+
+  .general {
+    order: -1; /* sube arriba */
+    width: 100%;
+    flex: unset;
+    margin-bottom: 20px;
+  }
+
+  .detalles {
+    order: 0;
+    width: 100%;
+    flex: unset;
+  }
+
+  /* ✅ solo los grupos de tarjetas en columna */
+  .reviews > div {
+    flex-direction: column;
+  }
+
+  .review-card {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+

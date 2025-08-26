@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./EnTendencia.css";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { LuClock3, LuEye } from "react-icons/lu";
@@ -101,6 +102,7 @@ function CarruselFila({ titulo, peliculas }) {
 
       <div className="contenedor-card">
         {visibles.map((peli) => (
+            <Link to="/contenido/detalle">
           <div
             key={`${titulo}-${peli.id}`}
             className={`card1 ${isGrande ? "card--xl" : ""}`}
@@ -133,7 +135,7 @@ function CarruselFila({ titulo, peliculas }) {
                 </div>
               )}
             </div>
-          </div>
+          </div></Link>
         ))}
       </div>
     </div>
