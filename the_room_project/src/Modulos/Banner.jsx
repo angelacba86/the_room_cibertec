@@ -12,7 +12,7 @@ function Banner() {
             contenido, incluyendo los últimos blockbuster, cine clásico, las
             series mas populares del momento, y más.
           </p>
-          <a>
+          <a href="#">
             <img src="./icon-play.png" alt="suscribete" />
             Empieza Ahora
           </a>

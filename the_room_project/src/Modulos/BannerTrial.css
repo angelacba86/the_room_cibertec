@@ -39,3 +39,10 @@ p {
 .boton-trial:hover {
   background-color: #8f0101;
 }
+.boton-trial{
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  &:hover {
+    transform: scale(1.08);
+  }
+}
