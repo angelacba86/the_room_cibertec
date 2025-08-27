@@ -55,14 +55,41 @@
 .detalles .review-card-body p {
   color: #999;
 }
-
-.detalles .cast img {
+.detalles .cast{
+  display:flex;
+  flex-direction:column;
+}
+.detalles .cast .actors-list{
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  
+}
+.cast .actors-list .actor{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  margin-top: 10px;
+  align-self: center;
+}
+.cast .actors-list .actor img {
   height: 100px;
   flex: 1 0 0;
   border-radius: 12px;
   margin-right: 13px;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.cast .actors-list .actor img:hover {
+  transform: scale(1.08);
+  z-index: 2;
+}
+
+.detalles .cast .actor small{
+  color: #999;
+  font-size: 12px;
+}
 .cast h5 {
   margin-bottom: 14px;
 }
