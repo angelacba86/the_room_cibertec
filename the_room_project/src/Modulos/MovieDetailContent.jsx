@@ -1,12 +1,29 @@
-import { FaStar, FaStarHalf, FaRegStar } from "react-icons/fa";
 import { CiCalendar } from "react-icons/ci";
 import { IoLanguage } from "react-icons/io5";
 import { PiCirclesFour } from "react-icons/pi";
+import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 
 import "./MovieDetailContent.css";
+
+const renderStars = (rating) => {
+  const stars = [];
+  for (let i = 1; i <= 5; i++) {
+    if (rating >= i) {
+      // Estrella llena
+      stars.push(<FaStar key={i} color="red" />);
+    } else if (rating >= i - 0.5) {
+      // Media estrella
+      stars.push(<FaStarHalfAlt key={i} color="red" />);
+    } else {
+      // Estrella vacía
+      stars.push(<FaRegStar key={i} color="red" />);
+    }
+  }
+  return stars;
+};
 function MovieDetailContent({ movie }) {
-  const photoProfile = "https://i.pravatar.cc/150?img=";
-  const arrayNum = [1, 2, 3, 4, 5, 6, 7, 8];
+  const avatarUrl = "https://ui-avatars.com/api/?name="; // 👈 también faltaba el "="
+
   return (
     <>
       <div className="contenedor detail">
@@ -17,14 +34,16 @@ function MovieDetailContent({ movie }) {
           </div>
           <div className="cast">
             <h5>Cast</h5>
-            {arrayNum.map((num, index) => (
-              <img
-                src={`${photoProfile}${num}`}
-                alt={`img-${num}`}
-                key={index}
-              />
-            ))}
+            <div className="actors-list">
+              {movie.cast?.map((actor, index) => (
+                <div key={index} className="actor">
+                  <img src={`${avatarUrl}${actor}`} alt={actor} />
+                  <small>{actor}</small>
+                </div>
+              ))}
+            </div>
           </div>
+
           <div className="reviews">
             <h5>Reviews</h5>
             <div className="reviews-container">
@@ -36,12 +55,8 @@ function MovieDetailContent({ movie }) {
                       <p>{review.pais}</p>
                     </div>
                     <div className="stars">
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <small>{review.rating}</small>
+                      {renderStars(review.calificacion)}
+                      <small>{review.calificacion}</small>
                     </div>
                   </div>
                   <div className="review-card-body">
@@ -55,18 +70,15 @@ function MovieDetailContent({ movie }) {
 
         <div className="general">
           <div className="seccion">
-            <div>
-              <h5>
-                <CiCalendar />
-                Año de Lanzamiento
-              </h5>
-            </div>
+            <h5>
+              <CiCalendar /> Año de Lanzamiento
+            </h5>
             <p>{movie.year}</p>
           </div>
+
           <div className="seccion">
             <h5>
-              <IoLanguage />
-              Lenguajes Disponibles
+              <IoLanguage /> Lenguajes Disponibles
             </h5>
             <div>
               {movie.lenguajesDisponibles?.map((lengua, i) => (
@@ -74,36 +86,31 @@ function MovieDetailContent({ movie }) {
               ))}
             </div>
           </div>
+
           <div className="seccion">
             <h5>
-              <FaRegStar />
-              Rating
+              <FaRegStar /> Rating
             </h5>
             <div>
               <div className="rating-card">
                 <h5>IMDB</h5>
                 <div>
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar /> <small>{movie.rating}</small>
+                  {renderStars(movie.rating)}
+                  <small>{movie.rating}</small>
                 </div>
               </div>
               <div className="rating-card">
                 <h5>The Room</h5>
                 <div>
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar /> <small>{movie.rating}</small>
+                  {renderStars(movie.rating)} <small>{movie.rating}</small>
                 </div>
               </div>
             </div>
           </div>
+
           <div className="seccion">
             <h5>
-              <PiCirclesFour></PiCirclesFour>
-              Géneros
+              <PiCirclesFour /> Géneros
             </h5>
             <div>
               {movie.generos?.map((genre, i) => (
