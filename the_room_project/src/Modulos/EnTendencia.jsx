@@ -107,15 +107,13 @@ function CarruselFila({ titulo, peliculas }) {
 
       <div className="contenedor-card">
         {visibles.map((peli) => (
-          <Link to={`/contenido/detalle/${peli.id}`}>
+          <Link to={`/contenido/detalle/${peli.id}`} key={peli.id}>
             <div
               key={`${titulo}-${peli.id}`}
               className={`card1 ${isGrande ? "card--xl" : ""}`}
             >
               <div className="poster-content">
-                <a href="#">
                   <img src={peli.img} alt={`Pelicula ${peli.id}`} />
-                </a>
               </div>
 
               <div className="duracion">
