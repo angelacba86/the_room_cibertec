@@ -18,7 +18,7 @@ const movies = [
     title: "Karate Kid: Leyendas",
     description:
       "Daniel llega a Beijing y descubre que Han tiene un nuevo protegido, Li Fong. Los dos mentores deben colaborar y ajustar enfoques educativos para preparar a Li Fong.",
-    background: "url('/banner_movie03.png')", 
+    background: "url('/banner_movie03.png')",
   },
   {
     title: "La hora de la desaparición",
@@ -50,10 +50,10 @@ function BannerMovies() {
       style={{
         backgroundImage: `linear-gradient(
           to top,
-          rgba(0, 0, 0, 1) 0%,
-          rgba(0, 0, 0, 0.85) 35%,
-          rgba(0, 0, 0, 0.6) 60%,
-          rgba(0, 0, 0, 0) 100%
+      rgba(20, 20, 20, 1) 0%,
+      rgba(0, 0, 0, 0.85) 35%,
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 0) 100%
         ), ${currentMovie.background}`,
       }}
     >
@@ -78,7 +78,9 @@ function BannerMovies() {
       </div>
 
       <div className="nav-buttons">
-        <a className="arrow-left" onClick={handlePrev}>←</a>
+        <a className="arrow-left" onClick={handlePrev}>
+          ←
+        </a>
 
         <div className="image-index">
           {movies.map((_, index) => (
@@ -89,7 +91,9 @@ function BannerMovies() {
           ))}
         </div>
 
-        <a className="arrow-right" onClick={handleNext}>→</a>
+        <a className="arrow-right" onClick={handleNext}>
+          →
+        </a>
       </div>
     </div>
   );
