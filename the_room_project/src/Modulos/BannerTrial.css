@@ -5,46 +5,76 @@
   box-shadow: none !important;
   border: none !important;
 }
+
 .img-fondo {
   width: 100%;
   align-items: center;
   background-image: url("/banner-trial.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 244px;
+  height: auto; /* 👈 permite crecer si el contenido lo requiere */
+  min-height: 244px;
   border-radius: 8px;
 }
+
 .img-fondo div {
   padding: 33px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
+  flex-wrap: wrap; /* 👈 evita que el texto se salga en pantallas pequeñas */
 }
+
 .img-fondo div .texto-banner {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 600px; /* 👈 controla el ancho del texto */
 }
+
 .img-fondo div .texto-banner h2,
-p {
+.img-fondo div .texto-banner p {
   align-self: flex-start;
+  margin: 0 0 10px 0;
+  word-wrap: break-word; /* 👈 evita desbordes de palabras largas */
 }
+
 .boton-trial {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
   background-color: #e50000;
-  padding: 18px 24px;
+  padding: 18px 28px;
   border-radius: 8px;
   border: solid #8f0101 1px;
   color: #fff;
   font-size: 18px;
-}
-.boton-trial:hover {
-  background-color: #8f0101;
-}
-.boton-trial{
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
-  &:hover {
-    transform: scale(1.08);
+}
+
+.boton-trial:hover {
+  background-color: #8f0101;
+  transform: scale(1.08);
+}
+
+/* 📱 Ajustes en pantallas pequeñas */
+@media (max-width: 768px) {
+  .img-fondo div {
+    flex-direction: column; /* texto arriba, botón abajo */
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .texto-banner {
+    max-width: 100%; /* ocupa todo el ancho disponible */
+  }
+
+  .boton-trial {
+    align-self: center;
+    margin-top: 15px;
+    width: 100%; /* botón ocupa ancho completo en móviles */
   }
 }
