@@ -15,7 +15,6 @@ export default function BannerTrial() {
           <button className="boton-trial">Prueba Gratis</button>
         </div>
       </div>
-         
     </div>
   );
 }
