@@ -55,20 +55,19 @@
 .detalles .review-card-body p {
   color: #999;
 }
-.detalles .cast{
-  display:flex;
-  flex-direction:column;
+.detalles .cast {
+  display: flex;
+  flex-direction: column;
 }
-.detalles .cast .actors-list{
+.detalles .cast .actors-list {
   display: flex;
   flex-direction: row;
-  overflow-x: auto;
+  flex-wrap: wrap;
   padding-bottom: 10px;
-  
 }
-.cast .actors-list .actor{
-  display:flex;
-  flex-direction:column;
+.cast .actors-list .actor {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   margin-top: 10px;
   align-self: center;
@@ -86,7 +85,7 @@
   z-index: 2;
 }
 
-.detalles .cast .actor small{
+.detalles .cast .actor small {
   color: #999;
   font-size: 12px;
 }
@@ -104,19 +103,23 @@
 .reviews {
   display: flex;
   flex-direction: column; /* mantiene las reviews en columna */
+  margin-bottom: 0 !important; /* para que detalles tengo el mismo alto de general */
 }
 .reviews-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .review-card {
   display: flex;
+  min-width: 400px;
   flex-direction: column;
   padding: 40px;
   background-color: #0f0f0f;
   border-radius: 12px;
   border: 1px solid #262626;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
 .review-card-head {
