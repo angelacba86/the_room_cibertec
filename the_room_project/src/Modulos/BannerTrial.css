@@ -1,7 +1,9 @@
-.contenedor {
+.trial {
   width: 100%;
   padding: 20px 6%;
   margin: 90px 0;
+  box-shadow: none !important;
+  border: none !important;
 }
 .img-fondo {
   width: 100%;
