@@ -4,7 +4,7 @@
   align-items: stretch !important;
 }
 
-/* 🔹 clave: el contenedor en flex para que columnas tengan mismo alto */
+/*  contenedor en flex para que columnas tengan mismo alto */
 .contenedor.detail,
 .detail {
   display: flex;
@@ -25,16 +25,16 @@
 
 .general {
   flex: 0 0 25%;
-  background-color: #262626;
+  background-color: var(--card-bg-secondary);
   border-radius: 12px;
-  border: 1px solid #262626;
+  border: 1px solid var(--card-bg-secondary);
   padding: 30px;
 }
 
 .detalles > div {
-  background-color: #262626;
+  background-color: var(--card-bg-secondary);
   border-radius: 12px;
-  border: 1px solid #262626;
+  border: 1px solid var(--card-bg-secondary);
   padding: 30px;
   font-weight: 500;
   line-height: 150%;
@@ -49,7 +49,7 @@
 
 .detalles > div p {
   font-size: 18px;
-  color: #fff;
+  color: var(--text-default);
 }
 
 .detalles .review-card-body p {
@@ -105,6 +105,29 @@
   flex-direction: column; /* mantiene las reviews en columna */
   margin-bottom: 0 !important; /* para que detalles tengo el mismo alto de general */
 }
+.reviews .reviews-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.reviews .reviews-head a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--bg-page);
+  border-radius: 12px;
+  color: var(--text-default);
+  border: 1px solid var(--card-bg-secondary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+.reviews .reviews-head a:hover {
+  transform: scale(1.05);
+}
 .reviews-container {
   display: flex;
   flex-direction: row;
@@ -118,7 +141,7 @@
   padding: 40px;
   background-color: #0f0f0f;
   border-radius: 12px;
-  border: 1px solid #262626;
+  border: 1px solid car(--card-bg-secondary);
   /* margin-right: 20px; */
 }
 
@@ -131,7 +154,7 @@
 }
 
 .review-card-head .user-data h6 {
-  color: #fff;
+  color: var(--text-default);
   font-size: 20px;
 }
 
@@ -149,10 +172,10 @@
   padding: 6px 10px;
   align-items: center;
   gap: 4px;
-  background-color: #141414;
+  background-color: var(--bg-page);
   border-radius: 51px;
-  border: 1px solid #262626; /* ✅ corregido */
-  color: #e50000;
+  border: 1px solid var(--card-bg-secondary); 
+  color: var(--accent);
 }
 
 .stars small {
@@ -176,9 +199,12 @@
 
 .general .seccion > div > div {
   padding: 8px 14px;
-  background-color: #141414;
-  border: 2px solid #262626;
+  background-color: var(--bg-page);
+  border: 2px solid var(--card-bg-secondary);
   border-radius: 8px;
+  align-items: center;
+  align-content: center;
+  text-align: center;
 }
 
 .general .seccion .rating-card {
@@ -195,7 +221,7 @@
 .general .seccion .rating-card div {
   display: flex;
   font-weight: 20px;
-  color: #e50000;
+  color: var(--accent);
   gap: 2px;
   align-items: center;
 }

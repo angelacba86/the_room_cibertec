@@ -2,6 +2,7 @@ import { CiCalendar } from "react-icons/ci";
 import { IoLanguage } from "react-icons/io5";
 import { PiCirclesFour } from "react-icons/pi";
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
+import { FaPenToSquare } from "react-icons/fa6";
 
 import "./MovieDetailContent.css";
 
@@ -45,7 +46,14 @@ function MovieDetailContent({ movie }) {
           </div>
 
           <div className="reviews">
-            <h5>Reviews</h5>
+            <div className="reviews-head">
+              <h5>Reviews</h5>
+              <a href="#">
+                <FaPenToSquare />
+                Dejar Comentario
+              </a>
+            </div>
+
             <div className="reviews-container">
               {movie.reviews?.map((review, index) => (
                 <div className="review-card" key={index}>
