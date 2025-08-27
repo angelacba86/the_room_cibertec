@@ -1,15 +1,15 @@
-* {
+/* * {
   box-sizing: border-box;
-}
-.contenedor1 {
-}
+} */
+/* .contenedor1 {
+} */
 
 .contenedor-card {
   display: flex;
   width: 100%;
   flex-wrap: nowrap; /* permite salto de línea */
   gap: 17px;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin-bottom: 50px;
 
   /*display: flex;
@@ -62,8 +62,6 @@
 /*Contenedor de trajetas*/
 
 .card1 {
-  /*width: 283px;
-    height: 372px;*/
   width: 224px;
   height: 305px;
   border-radius: 12px;
@@ -71,14 +69,22 @@
   background-color: rgba(38, 38, 38, 1);
   transition: transform 0.3s ease;
   overflow: hidden;
-  img {
-    /*padding: 20px 20px 20px 20px;*/
+  color: #999;
+
+  .poster-content {
     width: 200px;
     height: 238px;
     margin-inline: 10px;
     margin-top: 10px;
     margin-bottom: 5px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      border-radius: 12px;
+    }
   }
+
   .duracion {
     display: flex;
     justify-content: space-between;
@@ -90,7 +96,9 @@
     }
   }
 }
-
+.duracion a {
+  text-decoration:none !important;
+}
 .tiempo {
   display: flex;
   text-align: center;
@@ -202,12 +210,16 @@
   height: 388px;
 }
 
-.card1.card--xl img {
+.card1.card--xl .poster-content {
   width: 260px;
-  height: auto;
-  margin-inline: auto;
+  height: 320px;
+  overflow: hidden;
 }
-
+.card1.card--xl .poster-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .card1.card--xl .duracion {
   padding-inline: 20px;
 }
