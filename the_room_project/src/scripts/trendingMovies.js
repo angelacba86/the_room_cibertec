@@ -3,18 +3,27 @@ export const trendingMovies = [
     title: "Beetlejuice Beetlejuice",
     description:
       "La esperada secuela del clásico de Tim Burton regresa con más humor macabro y nostalgia.",
-    cast: ["Michael Keaton", "Winona Ryder", "Jenna Ortega"],
+    cast: [
+      "Michael Keaton",
+      "Winona Ryder",
+      "Catherine O'Hara",
+      "Justin Theroux",
+      "Monica Bellucci",
+      "Jenna Ortega",
+      "Willem Dafoe",
+      "Arthur Conti",
+    ],
     reviews: [
       {
         nombre: "Claudia",
         pais: "Chile",
-        calificacion: 8.5,
+        calificacion: 4.5,
         mensaje: "Oscura, divertida y muy nostálgica.",
       },
       {
         nombre: "Andrés",
         pais: "México",
-        calificacion: 8.2,
+        calificacion: 4,
         mensaje: "Burton en su máxima esencia.",
       },
     ],
@@ -25,12 +34,22 @@ export const trendingMovies = [
     cantidadVistas: "42k",
     poster: "/trending/poster01.png",
     banner: "/trending/banner01.png",
+    rating: 4,
   },
   {
     title: "Gladiator II",
     description:
       "Secuela épica que continúa el legado de Máximo en la arena romana.",
-    cast: ["Paul Mescal", "Denzel Washington", "Pedro Pascal"],
+    cast: [
+      "Paul Mescal",
+      "Denzel Washington",
+      "Pedro Pascal",
+      "Connie Nielsen",
+      "Joseph Quinn",
+      "Fred Hechinger",
+      "Lior Raz",
+      "Derek Jacobi",
+    ],
     reviews: [
       {
         nombre: "Esteban",
@@ -41,7 +60,7 @@ export const trendingMovies = [
       {
         nombre: "Valeria",
         pais: "Argentina",
-        calificacion: 8.8,
+        calificacion: 4.5,
         mensaje: "Grandiosa y emocionante.",
       },
     ],
@@ -52,23 +71,33 @@ export const trendingMovies = [
     cantidadVistas: "61k",
     poster: "/trending/poster02.png",
     banner: "/trending/banner02.png",
+    rating: 3,
   },
   {
     title: "Mufasa: The Lion King",
     description:
       "La historia de Mufasa antes de convertirse en rey, precuela de El Rey León.",
-    cast: ["Aaron Pierre", "Kelvin Harrison Jr."],
+    cast: [
+      "Aaron Pierre",
+      "Kelvin Harrison Jr.",
+      "Lupita Nyong'o",
+      "John Kani",
+      "Florence Kasumba",
+      "Keegan-Michael Key",
+      "Phumzile Sitole",
+      "Eric André",
+    ],
     reviews: [
       {
         nombre: "Santiago",
         pais: "Colombia",
-        calificacion: 8.6,
+        calificacion: 3.5,
         mensaje: "Épica y llena de emoción.",
       },
       {
         nombre: "Isabel",
         pais: "México",
-        calificacion: 8.7,
+        calificacion: 4,
         mensaje: "Hermosa animación y banda sonora.",
       },
     ],
@@ -79,23 +108,33 @@ export const trendingMovies = [
     cantidadVistas: "53k",
     poster: "/trending/poster03.png",
     banner: "/trending/banner03.png",
+    rating: 3,
   },
   {
     title: "Inside Out 2",
     description:
       "Riley ahora es adolescente y nuevas emociones llegan a su mente.",
-    cast: ["Amy Poehler", "Maya Hawke"],
+    cast: [
+      "Amy Poehler",
+      "Maya Hawke",
+      "Phyllis Smith",
+      "Lewis Black",
+      "Tony Hale",
+      "Ayo Edebiri",
+      "Adèle Exarchopoulos",
+      "Diane Lane",
+    ],
     reviews: [
       {
         nombre: "Tomás",
         pais: "Perú",
-        calificacion: 9.1,
+        calificacion: 4.5,
         mensaje: "Una secuela brillante y emotiva.",
       },
       {
         nombre: "Carla",
         pais: "Chile",
-        calificacion: 9.0,
+        calificacion: 5,
         mensaje: "Llena de risas y lágrimas.",
       },
     ],
@@ -106,23 +145,33 @@ export const trendingMovies = [
     cantidadVistas: "90k",
     poster: "/trending/poster04.png",
     banner: "/trending/banner04.png",
+    rating: 5,
   },
   {
     title: "Deadpool & Wolverine",
     description:
       "Los antihéroes más queridos se unen en una aventura salvaje del multiverso Marvel.",
-    cast: ["Ryan Reynolds", "Hugh Jackman"],
+    cast: [
+      "Ryan Reynolds",
+      "Hugh Jackman",
+      "Emma Corrin",
+      "Matthew Macfadyen",
+      "Morena Baccarin",
+      "Rob Delaney",
+      "Karan Soni",
+      "Jennifer Garner",
+    ],
     reviews: [
       {
         nombre: "Lucas",
         pais: "Argentina",
-        calificacion: 9.3,
+        calificacion: 4,
         mensaje: "Explosiva y divertidísima.",
       },
       {
         nombre: "María",
         pais: "México",
-        calificacion: 9.0,
+        calificacion: 5,
         mensaje: "La dupla que todos esperábamos.",
       },
     ],
@@ -133,23 +182,33 @@ export const trendingMovies = [
     cantidadVistas: "87k",
     poster: "/trending/poster05.png",
     banner: "/trending/banner05.png",
+    rating: 4,
   },
   {
     title: "Kingdom of the Planet of the Apes",
     description:
       "Nueva era de simios en la franquicia, siglos después de César.",
-    cast: ["Owen Teague", "Freya Allan"],
+    cast: [
+      "Owen Teague",
+      "Freya Allan",
+      "Kevin Durand",
+      "Peter Macon",
+      "William H. Macy",
+      "Eve Best",
+      "Antony Starr",
+      "Simu Liu",
+    ],
     reviews: [
       {
         nombre: "Mateo",
         pais: "Ecuador",
-        calificacion: 8.4,
+        calificacion: 3.5,
         mensaje: "Oscura y bien narrada.",
       },
       {
         nombre: "Andrea",
         pais: "Colombia",
-        calificacion: 8.6,
+        calificacion: 4.5,
         mensaje: "Visualmente impresionante.",
       },
     ],
@@ -160,23 +219,33 @@ export const trendingMovies = [
     cantidadVistas: "48k",
     poster: "/trending/poster06.png",
     banner: "/trending/banner06.png",
+    rating: 3,
   },
   {
     title: "The Substance",
     description:
       "Un thriller psicológico que explora la obsesión con la juventud y la perfección.",
-    cast: ["Demi Moore", "Margaret Qualley"],
+    cast: [
+      "Demi Moore",
+      "Margaret Qualley",
+      "Dennis Quaid",
+      "Edward Hamilton-Clark",
+      "Gore Abrams",
+      "Oscar Lesage",
+      "Christian Erickson",
+      "Robin Greer",
+    ],
     reviews: [
       {
         nombre: "Sofía",
         pais: "Perú",
-        calificacion: 8.7,
+        calificacion: 4.5,
         mensaje: "Perturbadora y atrapante.",
       },
       {
         nombre: "Gabriel",
         pais: "España",
-        calificacion: 8.5,
+        calificacion: 5,
         mensaje: "Un relato inquietante y original.",
       },
     ],
@@ -187,12 +256,22 @@ export const trendingMovies = [
     cantidadVistas: "360K",
     poster: "/trending/poster07.png",
     banner: "/trending/banner07.png",
+    rating: 5,
   },
   {
     title: "Despicable Me 4",
     description:
       "Gru y los minions regresan con más caos y diversión para toda la familia.",
-    cast: ["Steve Carell", "Kristen Wiig"],
+    cast: [
+      "Steve Carell",
+      "Kristen Wiig",
+      "Will Ferrell",
+      "Joey King",
+      "Sofía Vergara",
+      "Stephen Colbert",
+      "Chloe Fineman",
+      "Pierre Coffin",
+    ],
     reviews: [
       {
         nombre: "Nicolás",
@@ -203,7 +282,7 @@ export const trendingMovies = [
       {
         nombre: "Fernanda",
         pais: "Argentina",
-        calificacion: 8.3,
+        calificacion: 4,
         mensaje: "Los minions nunca fallan.",
       },
     ],
@@ -214,5 +293,6 @@ export const trendingMovies = [
     cantidadVistas: "67k",
     poster: "/trending/poster08.png",
     banner: "/trending/banner08.png",
+    rating: 3,
   },
 ];
