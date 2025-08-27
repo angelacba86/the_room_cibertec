@@ -12,8 +12,8 @@ const seccionesPeliculas = [
     titulo: "En Tendencia",
     peliculas: allMovies
       .filter((m) => m.poster?.startsWith("/trending/"))
-      .map((m, idx) => ({
-        id: idx + 1,
+      .map((m) => ({
+        ...m,
         img: m.poster,
         duracion: `${Math.floor(m.duracion / 60)}h ${m.duracion % 60}min`,
         vistas: m.cantidadVistas,
@@ -23,8 +23,8 @@ const seccionesPeliculas = [
     titulo: "Nuevos Lanzamientos",
     peliculas: allMovies
       .filter((m) => m.poster?.startsWith("/last_release/"))
-      .map((m, idx) => ({
-        id: idx + 1,
+      .map((m) => ({
+        ...m,
         img: m.poster,
         duracion: `${Math.floor(m.duracion / 60)}h ${m.duracion % 60}min`,
         vistas: m.cantidadVistas,
@@ -36,12 +36,12 @@ const seccionesPeliculas = [
     titulo: "Películas más vistas",
     peliculas: allMovies
       .filter((m) => m.poster?.startsWith("/most_watched/"))
-      .map((m, idx) => ({
-        id: idx + 1,
+      .map((m) => ({
+        ...m,
         img: m.poster,
         duracion: `${Math.floor(m.duracion / 60)}h ${m.duracion % 60}min`,
-        estrellas: 4, // Puedes ajustar según tu lógica
-        votos: m.cantidadVistas
+        estrellas: 4,
+        votos: m.cantidadVistas,
       })),
   },
 ];
@@ -112,9 +112,11 @@ function CarruselFila({ titulo, peliculas }) {
               key={`${titulo}-${peli.id}`}
               className={`card1 ${isGrande ? "card--xl" : ""}`}
             >
-              <a href="#">
-                <img src={peli.img} alt={`Pelicula ${peli.id}`} />
-              </a>
+              <div className="poster-content">
+                <a href="#">
+                  <img src={peli.img} alt={`Pelicula ${peli.id}`} />
+                </a>
+              </div>
 
               <div className="duracion">
                 <div className="tiempo">
