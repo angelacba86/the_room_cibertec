@@ -6,15 +6,13 @@ import { allMovies } from "../scripts";
 
 function MovieDetail() {
   const { id } = useParams();
-  const movie = allMovies.find(
-    (mov, idx) => (mov.id ? mov.id.toString() : (idx + 1).toString()) === id
-  );
+  const movie = allMovies.find((mov) => mov.id === id);
   if (!movie) return <div>Pagina no encontrada</div>;
   return (
     <>
-      <BannerMovieDetail movie={movie} />
-      <MovieDetailContent movie={movie} />
-      <BannerTrial />
+      <BannerMovieDetail movie={movie}/>
+      <MovieDetailContent movie={movie}/>
+      <BannerTrial/>
     </>
   );
 }
