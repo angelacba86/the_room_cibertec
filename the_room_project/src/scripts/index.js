@@ -5,5 +5,8 @@ import { trendingMovies } from "./trendingMovies";
 export const allMovies = [
   ...latestReleases,
   ...mostWatched,
-  ...trendingMovies
-];
+  ...trendingMovies,
+].map((movie, idx) => ({
+  ...movie,
+  id: idx.toString(),
+}));
