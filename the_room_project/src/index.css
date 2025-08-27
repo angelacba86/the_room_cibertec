@@ -1,20 +1,59 @@
+:root {
+  --bg-page: #141414;
+  --card-bg: #0f0f10;
+  --input-bg: rgba(255, 255, 255, 0.03);
+  --input-border: rgba(255, 255, 255, 0.06);
+  --muted: rgba(255, 255, 255, 0.55);
+  --label: rgba(255, 255, 255, 0.9);
+  --error: #ff6b6b;
+  --accent: #e50914;
+  --text-default: #fff;
+  --card-radius: 12px;
+  --card-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  --card-bg-secondary: #262626;
+  --a-bg:rgba(0, 0, 0, 0.5);
+  --banner-gradient: linear-gradient(
+    to top,
+    rgba(20, 20, 20, 1) 0%,
+    rgba(0, 0, 0, 0.85) 35%,
+    rgba(0, 0, 0, 0.6) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
 html, body {
   width: 100%;
   height: 100%;
-}
-body {
   font-family: "Manrope", sans-serif;
-  background-color: #141414;
-  color: #fff;
+  background-color: var(--bg-page);
+  color: var(--text-default);
 }
 
 * {
   margin: 0;
   padding: 0;
-   box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
-.contenedor {
+/* .contenedor {
   width: 1152px;
   margin: 0 auto;
+} */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+}
+
+a:hover {
+  color: var(--accent);
+  transform: scale(1.04);
+}
+
+button {
+  font-family: inherit;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
 }
